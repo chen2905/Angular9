@@ -1,0 +1,42 @@
+<h1>This component shows some example of build in pipes, pipe can transform the incoming data or text into other forms</h1>
+
+<h2>
+  lowercase: {{user.firstname|lowercase}}
+</h2>
+
+<h2>
+  uppercase: {{user.firstname|uppercase}}
+</h2>
+
+<h2>
+
+  date parameterized pipe): MMMM--YY:{{user.DOB| date:"MMMM-YYYY"}}
+</h2>
+<h2>
+
+  date parameterized pipe): longDate:{{user.DOB| date:"longDate"}}
+</h2>
+<h2>
+
+  date parameterized pipe): longDate:{{user.DOB| date:"longDate" }}
+</h2>
+<h2>
+
+  date parameterized pipe): shortDate:{{user.DOB| date:"shortDate"}}
+</h2>
+<h2>
+
+  currency（parameterized pipe): 'AUD':{{user.salary| currency:"AUD"}}
+</h2>
+<H2>JSON | lowercase :{{user|json | lowercase}}</H2>
+
+<h2>
+
+  chained pipes: longDate|lowercase:{{user.DOB| date:"longDate" |lowercase}}
+</h2>
+<h2>
+
+ custom pipe:
+
+ <div [innerHtml]="user.first|highlight:user.firstname"></div>
+</h2>
