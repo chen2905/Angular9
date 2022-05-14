@@ -17,6 +17,7 @@ import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-
 import { FormsModule } from '@angular/forms';
 import { BuildInPipeComponent } from './build-in-pipe/build-in-pipe.component';
 import { HighlightPipe } from './pipes/highlight.pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -42,7 +43,11 @@ import { HighlightPipe } from './pipes/highlight.pipe';
     FormsModule
 
   ],
-  providers: [],
+  providers: [
+
+// {provide:LocationStrategy,useClass:HashLocationStrategy}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
