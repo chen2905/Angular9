@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from './home/home.component';
-import { UserModule } from './user/user.module';
+import { HomeComponent } from './components/home/home.component';
+
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
@@ -20,6 +20,10 @@ import { HighlightPipe } from './pipes/highlight.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ParameterizedRouteComponent } from './components/parameterized-route/parameterized-route.component';
 import { QueryParameterRouteComponent } from './components/query-parameter-route/query-parameter-route.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 
 
 
@@ -38,12 +42,15 @@ import { QueryParameterRouteComponent } from './components/query-parameter-route
     BuildInPipeComponent,
     HighlightPipe,
     ParameterizedRouteComponent,
-    QueryParameterRouteComponent
+    QueryParameterRouteComponent,
+    ProductListComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule,
     FormsModule
 
   ],

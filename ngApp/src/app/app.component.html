@@ -1,7 +1,15 @@
-<div class="container">
+
+<div class="padding-x-xl container ">
   <div class="row">
-    <div class="col-4">
+    <div class="col-12 border">
+     <span class="text-center"> <h1>Angular Example</h1></span>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 border" >
       <ul>
+        <li><a class="dropdown-item" routerLink="">home</a></li>
         <li><a class="dropdown-item" routerLink="attribute-binding/">attribute binding</a></li>
         <li><a class="dropdown-item" routerLink="build-in-pipe/">build in pipe</a></li>
         <li><a class="dropdown-item" routerLink="event-binding/">event binding</a></li>
@@ -12,11 +20,17 @@
         <li><a class="dropdown-item" routerLink="property-binding/">property binding</a></li>
         <li><a class="dropdown-item" routerLink="two-way-data-binding/">two way data binding</a></li>
         <li><a class="dropdown-item" routerLink="parameterized-route/29/chen">parameterized route</a></li>
-        <li><a class="dropdown-item" [routerLink]='strQuery'>query parameter route</a></li>
-
+        <!-- <li><a class="dropdown-item" [routerLink]='strQuery'>query parameter route</a></li> -->
+        <li><a class="dropdown-item" routerLink="xdfasdfa">widecard route</a></li>
+        <li><a class="dropdown-item" routerLink="products">parent route</a></li>
+        <li><a class="dropdown-item" routerLink="products/add">children route 1</a></li>
+        <li><a class="dropdown-item" routerLink="products/edit/10">children route 2</a></li>
+        <li><a class="dropdown-item" routerLink="orders">lazy loading order module</a></li>
+        <li><a class="dropdown-item" routerLink="orders/detail/1">other module route</a></li>
+        <li><a class="dropdown-item" routerLink="admin">route guard</a></li>
       </ul>
     </div>
-    <div class="col-8">
+    <div class="col-9 border">
 
     <router-outlet></router-outlet>
     </div>
