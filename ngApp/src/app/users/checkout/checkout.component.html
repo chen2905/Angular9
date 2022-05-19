@@ -5,16 +5,18 @@
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="emailField" formControlName="emailField">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <small id="emailHelp" class="form-text text-muted" *ngIf="f['emailField'].touched && f['emailField'].errors">email is not valid</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Quantity</label>
       <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Quantity" name="quantityField" formControlName="quantityField">
+      <small id="emailHelp" class="form-text text-muted" *ngIf="f['quantityField'].touched && f['quantityField'].errors">enter the quantity</small>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1" name="termField" formControlName="termField">
+      <small id="emailHelp" class="form-text text-muted" *ngIf="f['termField'].touched && f['termField'].errors">check the term</small>
       <label class="form-check-label" for="exampleCheck1">agree to term</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!checkoutForm.valid">Submit</button>
   </form>
 </div>

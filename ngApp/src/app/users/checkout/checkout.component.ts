@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup,FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -11,9 +11,9 @@ export class CheckoutComponent implements OnInit {
   checkoutForm:FormGroup
   constructor(private fb:FormBuilder) {
     this.checkoutForm=this.fb.group( {
-      emailField: new FormControl(),
-      quantityField:new FormControl(),
-      termField:new FormControl()
+      emailField: ['',[Validators.required,Validators.email]],
+      quantityField: ['',[Validators.required]],
+      termField: ['',Validators.requiredTrue],
     })
 
 
@@ -23,5 +23,8 @@ export class CheckoutComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.checkoutForm.value)
+  }
+  get f(){
+    return this.checkoutForm.controls
   }
 }
