@@ -1,10 +1,12 @@
 <div class="container">
   <h1>example of template driven form</h1>
+  <h2>this example is good, the style in the css so the html is not so messey</h2>
   <form #loginForm="ngForm" (ngSubmit)="LoginUser(loginForm)">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emailAddressField" ngModel>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emailAddressField" ngModel required email #emailAddressField="ngModel">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <small *ngIf="emailAddressField.touched&&emailAddressField.invalid">email is required</small>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -27,6 +29,6 @@
       <textarea class="form-control" id="exampleCheck1" name="notesField" ngModel></textarea>
       <label class="form-check-label" for="exampleCheck1">notes</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
   </form>
 </div>
