@@ -3,3 +3,10 @@
 input.ng-touched.ng-invalid{
   border:1px solid red
 }
+ul{
+  list-style-type:none;
+  }
+.dropdown-item{
+  color:blue;
+}
+
