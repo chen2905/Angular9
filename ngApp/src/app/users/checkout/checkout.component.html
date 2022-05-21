@@ -1,7 +1,7 @@
 <div class="container">
   <h1>example of reactive from</h1>
   <h2>
-    this example is good, the style in the css so the html is not so messey
+    JSON.stringify() is very important to get object to string
   </h2>
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -63,17 +63,23 @@
         formArrayName="items"
       >
         <div [formGroupName]="i">
+
+      <span class="text-primary px-2"  (click)="removeItemAt(i)">Remove </span>
           <input type="text" class="form-control" formControlName="itemId">
           <input type="text" class="form-control" formControlName="itemName">
           <input type="text" class="form-control" formControlName="itemDesc">
           <input type="checkbox"  formControlName="itemDone">Mark as done
         </div>
       </div>
+      <span class="text-primary px-2"  (click)="onResetItems()">Reset Items</span>
+
+      <span class="text-primary px-2" (click)="addItem()">Add an Item</span>
+
     </div>
 
     <button
       type="submit"
-      class="btn btn-primary"
+      class="btn btn-primary mx-2"
       [disabled]="!checkoutForm.valid"
     >
       Submit
