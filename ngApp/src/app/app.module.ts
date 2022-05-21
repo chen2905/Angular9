@@ -24,6 +24,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { ObservableComponent } from './components/observable/observable.component';
+import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 
 
 
@@ -46,7 +48,9 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
     ProductListComponent,
     ProductAddComponent,
     ProductEditComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    ObservableComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,

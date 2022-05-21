@@ -18,6 +18,7 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AdminGuardGuard } from './admin-guard.guard';
+import { ObservableComponent } from './components/observable/observable.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent,pathMatch:'full'},
@@ -41,6 +42,7 @@ const routes: Routes = [
 
 {path:'admin', component:AdminHomeComponent,canActivate:[AdminGuardGuard]},
 { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
+{path:'observable',component:ObservableComponent},
 {path:'**',component:PageNotFoundComponent}
 
 
