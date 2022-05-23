@@ -1,9 +1,10 @@
 {
-  "posts":[
-    {"id":1,"title":"json-server","author":"typicod"}
+  "contacts": [
+    { "id": 1, "firstName": "chen", "lastName": "gao" },
+    { "id": 1, "firstName": "john", "lastName": "toranto" },
+    { "id": 1, "firstName": "krishna", "lastName": "kodali" },
+    { "id": 1, "firstName": "Amanda", "lastName": "Mood" }
   ],
-  "comments":[
-    {"id": 1,"body":"some comment","postId":1}
-  ],
-  "profile":{"name":"typicode"}
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,16 +6,18 @@ import { Injectable } from '@angular/core';
 })
 export class ContactService {
 
-  constructor() { }
+  constructor(private httpClient :HttpClient) { }
 
   getContactList(){
-    return [
-      {contactId:1, contactName:'Chen'},
-      {contactId:2, contactName:'Lin'},
-      {contactId:3, contactName:'Kayleen'},
-      {contactId:4, contactName:'Ava'},
 
-    ]
+    return this.httpClient.get("http://localhost:3000/contacts")
+    // return [
+    //   {contactId:1, contactName:'Chen'},
+    //   {contactId:2, contactName:'Lin'},
+    //   {contactId:3, contactName:'Kayleen'},
+    //   {contactId:4, contactName:'Ava'},
+
+    // ]
 
   }
 }
