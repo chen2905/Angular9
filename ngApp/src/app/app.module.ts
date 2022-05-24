@@ -11,10 +11,10 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
-import { AttributeBindingComponent } from './components/attribute-binding/attribute-binding.component';
+
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BuildInPipeComponent } from './components/build-in-pipe/build-in-pipe.component';
 import { HighlightPipe } from './pipes/highlight.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -27,6 +27,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { ObservableComponent } from './components/observable/observable.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AttributeBindingComponent } from './components/attribute-binding/attribute-binding.component';
 
 
 
@@ -39,7 +40,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NgClassComponent,
     InterpolationComponent,
     PropertyBindingComponent,
-    AttributeBindingComponent,
+AttributeBindingComponent,
     EventBindingComponent,
     TwoWayDataBindingComponent,
     BuildInPipeComponent,
@@ -58,6 +59,7 @@ import { ContactComponent } from './components/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
 
 

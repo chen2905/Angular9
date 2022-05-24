@@ -20,4 +20,7 @@ export class ContactService {
     // ]
 
   }
+  addNewContact(newContact:any){
+return this.httpClient.post("http://localhost:3000/contacts",newContact)
+  }
 }
