@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { Observable } from 'rxjs';
 import { ContactService } from 'src/app/services/contact.service';
 
@@ -74,6 +75,12 @@ export class ContactComponent implements OnInit {
         window.location.reload();
       }
     )
+  }
+  getFirstContact(){
+
+    this.contactService.getContactById(1).subscribe((data)=>{
+      this.formMessage= JSON.stringify(data);
+    })
   }
 
   }
