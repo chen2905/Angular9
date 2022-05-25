@@ -12,6 +12,7 @@ import { ContactService } from 'src/app/services/contact.service';
 export class ContactComponent implements OnInit {
   contacts: any;
   contactForm:any;
+  formMessage:any;
   constructor(private contactService: ContactService,private fb:FormBuilder) {}
   addedContactResponse:any
   ngOnInit(): void {
@@ -26,15 +27,54 @@ export class ContactComponent implements OnInit {
   }
 
   onAddNewContact(){
-    const contactListLength=this.contacts?.length +1
-    const newContact={
 
-      "id": contactListLength,
-      "firstName": this.contactForm.value.firstName,
-      "lastName":  this.contactForm.value.lastName
+    if(this.contactForm.valid){
+      const contactListLength=this.contacts?.length +1
+      const newContact={
+
+        "id": contactListLength,
+        "firstName": this.contactForm.value.firstName,
+        "lastName":  this.contactForm.value.lastName
+      }
+
+
+      this.contactService.addNewContact(newContact).subscribe((data)=>{
+        window.location.reload();
+      })
+    }else{
+      this.formMessage ="invalid input"
     }
-    this.contactService.addNewContact(newContact).subscribe((data)=>{
-      window.location.reload();
-    })
+
   }
-}
+
+  onUpdateContact(id:any){
+    if(this.contactForm.valid){
+       const updateContact={
+
+        "id": id,
+        "firstName": this.contactForm.value.firstName,
+        "lastName":  this.contactForm.value.lastName
+      }
+
+
+      this.contactService.updateContact(id,updateContact).subscribe((data)=>{
+        window.location.reload();
+      })
+    }else{
+      this.formMessage ="invalid input"
+    }
+  }
+
+  deleteLastContact(){
+    const contactListLength=this.contacts?.length
+
+    if (contactListLength>0){}
+    this.contactService.deleteContact(contactListLength).subscribe(
+      (data)=>{
+        window.location.reload();
+      }
+    )
+  }
+
+  }
+

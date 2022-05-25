@@ -2,7 +2,7 @@
 
 
 
-<form [formGroup]="contactForm" (ngSubmit)="onAddNewContact()">
+<form [formGroup]="contactForm" >
 
 <div class="form-group">
   <label for="">First Name</label>
@@ -12,8 +12,15 @@
   <label for="">Last Name</label>
   <input type="text" class="form-control"  name="lastName"  formControlName="lastName">
 
-<button class="btn btn-success"  type="submit">Add New Contact</button>
+
+
 </div>
+<button class="btn btn-success" (click)="onAddNewContact()">Add New Contact</button>
+<button class="btn btn-success"  (click)="onUpdateContact(2)">update Contact 2</button>
+<button class="btn btn-success"  (click)="deleteLastContact()">delete Las Contact</button>
+
+
+{{formMessage}}
 </form>
 
 <ul *ngFor="let contact of contacts">

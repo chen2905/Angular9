@@ -1,16 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContactService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient :HttpClient) { }
-
-  getContactList(){
-
-    return this.httpClient.get("http://localhost:3000/contacts")
+  getContactList() {
+    return this.httpClient.get('http://localhost:3000/contacts');
     // return [
     //   {contactId:1, contactName:'Chen'},
     //   {contactId:2, contactName:'Lin'},
@@ -18,9 +16,24 @@ export class ContactService {
     //   {contactId:4, contactName:'Ava'},
 
     // ]
-
   }
-  addNewContact(newContact:any){
-return this.httpClient.post("http://localhost:3000/contacts",newContact)
+  addNewContact(newContactBody: any) {
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'appliation/json');
+    return this.httpClient.post('http://localhost:3000/contacts', newContactBody, {
+      headers: httpHeaders,
+    });
+  }
+
+  updateContact(id:any,updateContactBody: any) {
+    const httpHeaders = new HttpHeaders();
+    //httpHeaders.append('content-type', 'appliation/json');
+    return this.httpClient.put('http://localhost:3000/contacts/'+id, updateContactBody);
+  }
+
+  deleteContact(id:any) {
+    const httpHeaders = new HttpHeaders();
+    //httpHeaders.append('content-type', 'appliation/json');
+    return this.httpClient.delete('http://localhost:3000/contacts/'+id);
   }
 }
