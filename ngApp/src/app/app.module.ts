@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -28,6 +28,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AttributeBindingComponent } from './components/attribute-binding/attribute-binding.component';
+import { LoggingInterceptor } from './interceptors/logging.interceptor';
 
 
 
@@ -66,7 +67,7 @@ AttributeBindingComponent,
   ],
   providers: [
 
-// {provide:LocationStrategy,useClass:HashLocationStrategy}
+    {provide:HTTP_INTERCEPTORS,useClass:LoggingInterceptor,multi:true}
 
   ],
   bootstrap: [AppComponent]
