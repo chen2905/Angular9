@@ -29,6 +29,8 @@ import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AttributeBindingComponent } from './components/attribute-binding/attribute-binding.component';
 import { LoggingInterceptor } from './interceptors/logging.interceptor';
+import { AotComponent } from './components/aot/aot.component';
+import { StagingModeComponent } from './staging-mode/staging-mode.component';
 
 
 
@@ -54,7 +56,9 @@ AttributeBindingComponent,
     AdminHomeComponent,
     ObservableComponent,
     LeftMenuComponent,
-    ContactComponent
+    ContactComponent,
+    AotComponent,
+    StagingModeComponent
   ],
   imports: [
     BrowserModule,

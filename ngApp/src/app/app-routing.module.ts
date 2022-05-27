@@ -20,6 +20,8 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { AdminGuardGuard } from './admin-guard.guard';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AotComponent } from './components/aot/aot.component';
+import { StagingModeComponent } from './staging-mode/staging-mode.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent,pathMatch:'full'},
@@ -44,6 +46,8 @@ const routes: Routes = [
 { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
 {path:'observable',component:ObservableComponent},
 {path:'contact',component:ContactComponent},
+{path:'aot',component:AotComponent},
+{path:'enviorment',component:StagingModeComponent},
 {path:'**',component:PageNotFoundComponent}
 
 
