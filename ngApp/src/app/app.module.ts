@@ -30,7 +30,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AttributeBindingComponent } from './components/attribute-binding/attribute-binding.component';
 import { LoggingInterceptor } from './interceptors/logging.interceptor';
 import { AotComponent } from './components/aot/aot.component';
-import { StagingModeComponent } from './staging-mode/staging-mode.component';
+import { StagingModeComponent } from './components/staging-mode/staging-mode.component';
+
+import { OrdersModule} from './modules/orders/orders.module';
 
 
 
@@ -65,7 +67,9 @@ AttributeBindingComponent,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrdersModule,
+    OrdersModule
 
 
   ],

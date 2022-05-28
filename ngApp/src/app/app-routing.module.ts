@@ -21,7 +21,7 @@ import { AdminGuardGuard } from './admin-guard.guard';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AotComponent } from './components/aot/aot.component';
-import { StagingModeComponent } from './staging-mode/staging-mode.component';
+import { StagingModeComponent } from './components/staging-mode/staging-mode.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent,pathMatch:'full'},
@@ -41,9 +41,9 @@ const routes: Routes = [
   {path:'add',component:ProductAddComponent},
   {path:'edit/:id',component:ProductEditComponent},
 ]},
-{ path: 'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule) },
+{ path: 'orders', loadChildren: () => import('./modules/orders/orders.module').then(m => m.OrdersModule) },
 {path:'admin', component:AdminHomeComponent,canActivate:[AdminGuardGuard]},
-{ path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
+{ path: 'users', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
 {path:'observable',component:ObservableComponent},
 {path:'contact',component:ContactComponent},
 {path:'aot',component:AotComponent},
