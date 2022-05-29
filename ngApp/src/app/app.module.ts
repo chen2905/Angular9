@@ -34,6 +34,9 @@ import { StagingModeComponent } from './components/staging-mode/staging-mode.com
 
 import { OrdersModule} from './modules/orders/orders.module';
 
+import { ProductsModule } from './modules/products/products.module';
+
+
 
 
 @NgModule({
@@ -69,7 +72,8 @@ AttributeBindingComponent,
     ReactiveFormsModule,
     HttpClientModule,
     OrdersModule,
-    OrdersModule
+   ProductsModule
+
 
 
   ],
