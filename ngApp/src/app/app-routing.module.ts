@@ -36,11 +36,10 @@ const routes: Routes = [
 {path:'two-way-data-binding',component:TwoWayDataBindingComponent},
 {path:'parameterized-route/:id/:name',component:ParameterizedRouteComponent},
 {path:'query-parameter-route',component:QueryParameterRouteComponent},
-{path:'products', component:ProductListComponent},
-{path:'products',children:[
-  {path:'add',component:ProductAddComponent},
-  {path:'edit/:id',component:ProductEditComponent},
-]},
+// {path:'products',children:[
+//   {path:'add',component:ProductAddComponent},
+//   {path:'edit/:id',component:ProductEditComponent},
+// ]},
 { path: 'orders', loadChildren: () => import('./modules/orders/orders.module').then(m => m.OrdersModule) },
 {path:'admin', component:AdminHomeComponent,canActivate:[AdminGuardGuard]},
 { path: 'users', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
@@ -48,6 +47,7 @@ const routes: Routes = [
 {path:'contact',component:ContactComponent},
 {path:'aot',component:AotComponent},
 {path:'enviorment',component:StagingModeComponent},
+{ path: 'products', loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule) },
 {path:'**',component:PageNotFoundComponent}
 
 
