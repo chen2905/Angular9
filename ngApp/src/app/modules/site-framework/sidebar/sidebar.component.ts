@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgIterable, OnInit } from '@angular/core';
+import { Category } from '../../products/interfaces/category';
+import { ProductsService } from '../../products/services/products.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  // categoryList:NgIterable<Category>|undefined
+  categoryList:any
+  constructor(private productService:ProductsService) { }
 
   ngOnInit(): void {
+    this.productService.getAllCategories().subscribe(data=>{
+      this.categoryList = data
+    })
   }
 
 }

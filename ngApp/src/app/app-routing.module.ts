@@ -22,6 +22,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { ContactComponent } from './components/contact/contact.component';
 import { AotComponent } from './components/aot/aot.component';
 import { StagingModeComponent } from './components/staging-mode/staging-mode.component';
+import { ProductsComponent } from './modules/products/products.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent,pathMatch:'full'},
@@ -47,7 +48,15 @@ const routes: Routes = [
 {path:'contact',component:ContactComponent},
 {path:'aot',component:AotComponent},
 {path:'enviorment',component:StagingModeComponent},
-{ path: 'products', loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule) },
+{ path: 'products',component:ProductsComponent,
+  children:[{
+    path:'',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule),
+  }
+
+  ]
+
+},
 {path:'**',component:PageNotFoundComponent}
 
 

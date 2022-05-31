@@ -16,6 +16,8 @@ import { FooterComponent } from '../site-framework/footer/footer.component';
 import { SidebarComponent } from '../site-framework/sidebar/sidebar.component';
 import { HeaderComponent } from '../site-framework/header/header.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { HeaderComponent } from '../site-framework/header/header.component';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    HttpClientModule
   ]
 })
 export class ProductsModule { }

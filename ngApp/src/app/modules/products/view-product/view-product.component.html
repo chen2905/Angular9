@@ -1,13 +1,17 @@
-<div class=" d-lg-flex flex-lg-row d-flex flex-column-reverse bg-light mt-5">
-  <div class="p-5" id="2">
-      <p class="p-green">FRUIT FRESH</p>
-      <P class="fs-4 fw-bold">Vegetable</P>
-      <p class="fs-4 fw-bold">100% Organic</p>
-      <p class="text-muted mb-4">Free Pickup and Delivery Available</p>
-      <div class="btn btn-success px-4">SHOP NOW</div>
-  </div>
-  <div id="1">
-      <img src="https://www.freepnglogos.com/uploads/vegetables-png/vegetables-about-our-philosophy-super-healthy-kids-23.png"
-          class="w-75 h-75" alt="">
-  </div>
+<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+  <div class="media-body order-2 order-lg-1" *ngIf="product">
+      <h5 class="mt-0 font-weight-bold mb-2">{{product.productName}}</h5>
+      <p class="font-italic text-muted mb-0 small">{{product.description}}</p>
+      <div class="d-flex align-items-center justify-content-between mt-1">
+          <h6 class="font-weight-bold my-2">{{product.price|currency}}</h6>
+
+          <ul class="list-inline small">
+              <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+              <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+          </ul>
+      </div>
+  </div><img src="{{product.productImg}}" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
 </div>

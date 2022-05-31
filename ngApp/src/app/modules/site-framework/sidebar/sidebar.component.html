@@ -5,9 +5,20 @@
     >
   </li>
   <li>
-    <a class="dropdown-item" routerLink="create">create product</a>
+    <a class="dropdown-item" routerLink="create">create</a>
   </li>
   <li>
-    <a class="dropdown-item" routerLink="view">view a product</a>
+    <a class="dropdown-item" routerLink="view/2904">view </a>
+  </li>
+  <li>
+    <a class="dropdown-item" routerLink="search">search by category</a>
+  </li>
+  <li>
+    <a class="dropdown-item" routerLink="search-date">search by date</a>
+  </li>
+
+  <li *ngFor="let category of categoryList">
+    <a class="dropdown-item" routerLink="search/{{category.id}}">{{category.categoryName}}</a>
+
   </li>
   </ul>
