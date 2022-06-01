@@ -1,49 +1,59 @@
 {
   "products": [
-  {
-    "id":1,
-    "categoryId": 1,
-    "productName": "Apple iPhone XR (Red, 128 GB)",
-    "description":"128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor",
-    "rating":"great",
-    "price":"1300",
-    "productImg":"https://i.imgur.com/KFojDGa.jpg",
-    "isAvailable":true,
-    "view":100
-},
-
-{
-  "id":2,
-  "categoryId": 2,
-  "productName": "OnePlus 7 Pro (Almond, 256 GB)",
-  "description":"Rear Camera|48MP (Primary)+ 8MP (Tele-photo)+16MP (ultrawide)| Front Camera|16 MP POP-UP Camera|8GB RAM|Android pie",
-  "rating":"great",
-  "price":"1200",
-  "productImg":"https://i.imgur.com/6IUbEME.jpg",
-  "isAvailable":true,
-  "view":90
-},
-
-{
-  "id":3,
-  "categoryId": 2,
-  "productName": "Redmi Note 11 6GB 128GB: Brand New",
-  "description":"Build OS Android 11 OS  UI MIUI 12.5  Dimensions 162 × 75.5 × 8.9 mm  Weight 181 g ",
-  "rating":"great",
-  "price":"1200",
-  "productImg":"https://www.powerplanetonline.com/cdnassets/xiaomi_redmi_note_11_azul_estelar_01_l.jpg",
-  "isAvailable":true,
-  "view":89
-}
+    {
+      "id": 1,
+      "categoryId": 1,
+      "productName": "Apple iPhone XR (Red, 128 GB)",
+      "description": "128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor",
+      "rating": "great",
+      "price": "1300",
+      "productImg": "https://i.imgur.com/KFojDGa.jpg",
+      "isAvailable": true,
+      "view": 100
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "productName": "OnePlus 7 Pro (Almond, 256 GB)",
+      "description": "Rear Camera|48MP (Primary)+ 8MP (Tele-photo)+16MP (ultrawide)| Front Camera|16 MP POP-UP Camera|8GB RAM|Android pie",
+      "rating": "great",
+      "price": "1200",
+      "productImg": "https://i.imgur.com/6IUbEME.jpg",
+      "isAvailable": true,
+      "view": 90
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "productName": "Redmi Note 11 6GB 128GB: Brand New",
+      "description": "Build OS Android 11 OS  UI MIUI 12.5  Dimensions 162 × 75.5 × 8.9 mm  Weight 181 g ",
+      "rating": "great",
+      "price": "1200",
+      "productImg": "https://www.powerplanetonline.com/cdnassets/xiaomi_redmi_note_11_azul_estelar_01_l.jpg",
+      "isAvailable": true,
+      "view": 89
+    },
+    {
+      "id": 4,
+      "productName": "product name11",
+      "categoryId": "1",
+      "description": "Description.......1111",
+      "rating": "great",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
+      "views": "2"
+    }
   ],
   "categories": [
-    { "id": 1,
-      "categoryName":"Iphone"
+    {
+      "id": 1,
+      "categoryName": "Iphone"
     },
-    { "id": 2,
-      "categoryName":"Android Phone"
+    {
+      "id": 2,
+      "categoryName": "Android Phone"
     }
-
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

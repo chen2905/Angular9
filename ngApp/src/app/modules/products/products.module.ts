@@ -17,6 +17,7 @@ import { SidebarComponent } from '../site-framework/sidebar/sidebar.component';
 import { HeaderComponent } from '../site-framework/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -38,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductsModule { }

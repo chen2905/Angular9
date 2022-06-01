@@ -6,6 +6,6 @@ export interface Product {
   rating:string;
   price:number;
   productImg:string;
-  isAvaliable:boolean;
+  isAvailable:boolean;
  views:number;
 }
