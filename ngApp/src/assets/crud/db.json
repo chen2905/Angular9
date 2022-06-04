@@ -35,29 +35,6 @@
       "productImg": "https://www.powerplanetonline.com/cdnassets/xiaomi_redmi_note_11_azul_estelar_01_l.jpg",
       "isAvailable": true,
       "view": 89
-    },
-    {
-      "id": 4,
-      "productName": "product name11",
-      "categoryId": "1",
-      "description": "Description.......1111",
-      "rating": "great",
-      "price": "1200",
-      "productColor": "blue",
-      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
-      "isAvailable": true,
-      "views": 2
-    },
-    {
-      "id": 5,
-      "productName": "product name0406222",
-      "categoryId": "2",
-      "description": "Description......2",
-      "rating": "great",
-      "price": "22",
-      "productColor": "blue2",
-      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
-      "views": "1"
     }
   ],
   "categories": [

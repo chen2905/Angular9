@@ -34,7 +34,7 @@ export class UpdateProductComponent implements OnInit {
                 categoryId:[this.product.categoryId,[Validators.required]],
                 description:[this.product.description,[Validators.required]],
                 productColor:[this.product.productColor,[Validators.required]],
-                isAvaliable:[this.product.isAvailable,[Validators.required]],
+                isAvailable:[this.product.isAvailable,[Validators.required]],
                 productPrice:[this.product.price,[Validators.required]],
                 views:[this.product.views,[Validators.required]]
               }
@@ -61,7 +61,7 @@ export class UpdateProductComponent implements OnInit {
       isAvailable:this.productForm.value.isAvailable,
       views:this.productForm.value.views
     }
-
+console.log("form values:"+ JSON.stringify(this.productForm.value))
     this.productService.updateProduct(this.productId,theProduct).subscribe(
       data=>{
         this.router.navigate(['/products/view-all'])

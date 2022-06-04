@@ -16,5 +16,9 @@ export class ViewAllProductsComponent implements OnInit {
     })
 
   }
-
+deleteProduct(id:any){
+  this.productSerivce.deleteProduct(id).subscribe(data=>{
+    window.location.reload();
+  })
+}
 }

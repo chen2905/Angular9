@@ -22,7 +22,7 @@ export class CreateProductComponent implements OnInit {
         categoryId:['1',[Validators.required]],
         description:['Description.......',[Validators.required]],
         productColor:['blue',[Validators.required]],
-        isAvaliable:[true,[Validators.required]],
+        isAvailable:[true,[Validators.required]],
         productPrice:[1500,[Validators.required]],
         views:[1,[Validators.required]]
       }
