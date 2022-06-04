@@ -1,1 +1,66 @@
-<p>update-product works!</p>
+<form class="row g-3 needs-validation" [formGroup]="productForm" (ngSubmit)="updateProduct()">
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Product Name </label>
+    <input type="text" class="form-control" id="productName" name="productName" formControlName="productName">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Category ID</label>
+    <input type="text" class="form-control" id="categoryId" name ="categoryId" formControlName="categoryId">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Description</label>
+    <div class="input-group has-validation">
+      <textarea class="form-control" id="description" name ="description" aria-describedby="inputGroupPrepend" formControlName="description"></textarea>
+
+      <div class="invalid-feedback">
+        please enter a description
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Product Color</label>
+    <input type="text" class="form-control" id="productColor" name="productColor" formControlName="productColor">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom04" class="form-label">Is isAvaliable</label>
+    <select class="form-select" id="validationCustom04" formControlName="isAvaliable">
+      <option  value="">Choose...</option>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Product Price</label>
+    <input type="text" class="form-control" id="productPrice" name="productPrie" formControlName="productPrice">
+    <div class="invalid-feedback">
+      Please provide a valid price.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom04" class="form-label" >view</label>
+    <select class="form-select" id="views" name="views" formControlName="views">
+      <option  value="">Choose...</option>
+      <option value=1>1</option>
+      <option value=2>2</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid view.
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>

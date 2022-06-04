@@ -7,6 +7,7 @@
       "description": "128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor",
       "rating": "great",
       "price": "1300",
+      "productColor": "blue",
       "productImg": "https://i.imgur.com/KFojDGa.jpg",
       "isAvailable": true,
       "view": 100
@@ -18,6 +19,7 @@
       "description": "Rear Camera|48MP (Primary)+ 8MP (Tele-photo)+16MP (ultrawide)| Front Camera|16 MP POP-UP Camera|8GB RAM|Android pie",
       "rating": "great",
       "price": "1200",
+      "productColor": "blue",
       "productImg": "https://i.imgur.com/6IUbEME.jpg",
       "isAvailable": true,
       "view": 90
@@ -29,6 +31,7 @@
       "description": "Build OS Android 11 OS  UI MIUI 12.5  Dimensions 162 × 75.5 × 8.9 mm  Weight 181 g ",
       "rating": "great",
       "price": "1200",
+      "productColor": "blue",
       "productImg": "https://www.powerplanetonline.com/cdnassets/xiaomi_redmi_note_11_azul_estelar_01_l.jpg",
       "isAvailable": true,
       "view": 89
@@ -39,8 +42,22 @@
       "categoryId": "1",
       "description": "Description.......1111",
       "rating": "great",
+      "price": "1200",
+      "productColor": "blue",
       "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
-      "views": "2"
+      "isAvailable": true,
+      "views": 2
+    },
+    {
+      "id": 5,
+      "productName": "product name0406222",
+      "categoryId": "2",
+      "description": "Description......2",
+      "rating": "great",
+      "price": "22",
+      "productColor": "blue2",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
+      "views": "1"
     }
   ],
   "categories": [

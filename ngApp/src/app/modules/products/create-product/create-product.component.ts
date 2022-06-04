@@ -49,6 +49,7 @@ export class CreateProductComponent implements OnInit {
       description:this.productForm.value.description,
       rating:"great",
       price: this.productForm.value.price,
+      productColor:this.productForm.value.productColor,
       productImg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRCSxjZPr4-8XAOyYm-0ayCnpAmi_1LUitA&usqp=CAU",
       isAvailable:this.productForm.value.isAvailable,
       views:this.productForm.value.views
