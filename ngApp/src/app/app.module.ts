@@ -33,6 +33,7 @@ import { AotComponent } from './components/aot/aot.component';
 import { StagingModeComponent } from './components/staging-mode/staging-mode.component';
 
 import { OrdersModule} from './modules/orders/orders.module';
+import { RxjsModule } from './modules/rxjs/rxjs.module';
 
 
 
@@ -71,6 +72,7 @@ AttributeBindingComponent,
     ReactiveFormsModule,
     HttpClientModule,
     OrdersModule,
+    RxjsModule
 
 
 

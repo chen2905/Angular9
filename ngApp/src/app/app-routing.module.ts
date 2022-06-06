@@ -25,50 +25,68 @@ import { StagingModeComponent } from './components/staging-mode/staging-mode.com
 import { ProductsComponent } from './modules/products/products.component';
 
 const routes: Routes = [
-{path:'',component:HomeComponent,pathMatch:'full'},
-{path:'attribute-binding',component:AttributeBindingComponent},
-{path:'build-in-pipe',component:BuildInPipeComponent},
-{path:'event-binding',component:EventBindingComponent},
-{path:'interpolation',component:Interpolation},
-{path:'ng-class',component:NgClassComponent},
-{path:'ng-for',component:NgForComponent},
-{path:'ng-style',component:NgStyle},
-{path:'property-binding',component:PropertyBindingComponent},
-{path:'two-way-data-binding',component:TwoWayDataBindingComponent},
-{path:'parameterized-route/:id/:name',component:ParameterizedRouteComponent},
-{path:'query-parameter-route',component:QueryParameterRouteComponent},
-// {path:'products',children:[
-//   {path:'add',component:ProductAddComponent},
-//   {path:'edit/:id',component:ProductEditComponent},
-// ]},
-{ path: 'orders', loadChildren: () => import('./modules/orders/orders.module').then(m => m.OrdersModule) },
-{path:'admin', component:AdminHomeComponent,canActivate:[AdminGuardGuard]},
-{ path: 'users', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
-{path:'observable',component:ObservableComponent},
-{path:'contact',component:ContactComponent},
-{path:'aot',component:AotComponent},
-{path:'enviorment',component:StagingModeComponent},
-{ path: 'products',component:ProductsComponent,
-  children:[{
-    path:'',
-    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule),
-  }
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'attribute-binding', component: AttributeBindingComponent },
+  { path: 'build-in-pipe', component: BuildInPipeComponent },
+  { path: 'event-binding', component: EventBindingComponent },
+  { path: 'interpolation', component: Interpolation },
+  { path: 'ng-class', component: NgClassComponent },
+  { path: 'ng-for', component: NgForComponent },
+  { path: 'ng-style', component: NgStyle },
+  { path: 'property-binding', component: PropertyBindingComponent },
+  { path: 'two-way-data-binding', component: TwoWayDataBindingComponent },
+  {
+    path: 'parameterized-route/:id/:name',
+    component: ParameterizedRouteComponent,
+  },
+  { path: 'query-parameter-route', component: QueryParameterRouteComponent },
+  // {path:'products',children:[
+  //   {path:'add',component:ProductAddComponent},
+  //   {path:'edit/:id',component:ProductEditComponent},
+  // ]},
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./modules/orders/orders.module').then((m) => m.OrdersModule),
+  },
+  {
+    path: 'admin',
+    component: AdminHomeComponent,
+    canActivate: [AdminGuardGuard],
+  },
+  {
+    path: 'users',
+    loadChildren: () =>
+      import('./modules/users/users.module').then((m) => m.UsersModule),
+  },
+  { path: 'observable', component: ObservableComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'aot', component: AotComponent },
+  { path: 'enviorment', component: StagingModeComponent },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./modules/products/products.module').then(
+            (m) => m.ProductsModule
+          ),
+      },
+    ],
+  },
 
-  ]
-
-},
-{path:'**',component:PageNotFoundComponent}
-
-
-
-
-
-
-
+  {
+    path: 'rxjs',
+    loadChildren: () =>
+      import('./modules/rxjs/rxjs.module').then((m) => m.RxjsModule),
+  },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
