@@ -12,11 +12,11 @@ export class RxjsOfOperatorComponent implements OnInit {
 
   prayArray=['Thank','You', 'Mighty', 'God']
   prayArrayObservable:Observable<string[]> = of (this.prayArray);
-  prayArrayDisplay:string[]|undefined;
+  prayArrayDisplay$:string[]|undefined;
 
   prayString ='Thank you! Mighty God'
   prayStringObservable:Observable<string> = of (this.prayString)
-  prayStringDisplay :string |undefined
+  prayStringDisplay$ :string |undefined
 
  prayObjectArray=[
    {id:1,pray:"Thank"},
@@ -29,19 +29,20 @@ export class RxjsOfOperatorComponent implements OnInit {
  ]
 
  prayOjectArrayObservable :Observable<any> = of ( this.prayObjectArray)
- prayOjectArrayDisplay:any
+ prayOjectArrayDisplay$:any
 
   ngOnInit(): void {
     this.prayArrayObservable.subscribe(data=>{
-      this.prayArrayDisplay = data
+      this.prayArrayDisplay$ = data
     })
 
     this.prayStringObservable.subscribe(data=>{
-      this.prayStringDisplay = data
+      this.prayStringDisplay$ = data
     })
 
     this.prayOjectArrayObservable.subscribe(data=>{
-      this.prayOjectArrayDisplay = JSON.stringify(data)
+     // this.prayOjectArrayDisplay$ = JSON.stringify(data)
+     this.prayOjectArrayDisplay$ = data
     })
 
   }
