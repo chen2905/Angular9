@@ -1,14 +1,20 @@
 <form [formGroup]="rxjsForm">
 
   <div class="row">
-    <div class="col-3">input with take opt:</div>
+    <div class="col-4">input with take opt:</div>
     <div class="col-6"><input type="text" name="txtTake" formControlName="txtTake"></div>
-    <div class="col-3">{{txtTakeDisplay}}</div>
+    <div class="col-2">{{txtTakeDisplay}}</div>
   </div>
   <div class="row">
-    <div class="col-3">input with take while opt(only take input's length shorter than 5 in this case):</div>
+    <div class="col-4">take last 2 words from array ['Thank','You','Mighty','God']</div>
+    <div class="col-6">{{txtTakeLastDisplay}}</div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">input with take while opt(only take input's length shorter than 5 in this case):</div>
     <div class="col-6"><input type="text" name="txtTakeWhile" formControlName="txtTakeWhile"></div>
-    <div class="col-3">{{txtTakeWhileDisplay}}</div>
+    <div class="col-2">{{txtTakeWhileDisplay}}</div>
   </div>
 </form>
 

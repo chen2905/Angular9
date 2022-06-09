@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { fromEvent, Observable,debounceTime,take,takeWhile } from 'rxjs';
+import { fromEvent, Observable,debounceTime,take,takeWhile,of, from,takeLast } from 'rxjs';
 
 @Component({
   selector: 'app-rxjs-take-take-while-operator',
@@ -15,7 +15,14 @@ export class RxjsTakeTakeWhileOperatorComponent implements OnInit {
     txtTake:[''],
     txtTakeWhile:[''],
   }) }
+
+  prayArray:string[]=['Thank','You','Mighty','God'];
+  prayArray$:Observable<string>=from(this.prayArray)
+
+  txtTakeLastDisplay:any
   txtTakeDisplay:any
+
+
   txtTakeWhileDisplay:any
 
   ngOnInit(): void {
@@ -26,6 +33,19 @@ export class RxjsTakeTakeWhileOperatorComponent implements OnInit {
       take(2),
       debounceTime(2000))
     .subscribe(data =>{this.txtTakeDisplay=data});
+
+    this.prayArray$
+    .pipe(
+      takeLast(3)
+    ).subscribe(
+      data=>{
+        this.txtTakeLastDisplay = JSON.stringify(data)
+        console.log(data)
+      }
+
+    )
+
+
 
    this.rxjsForm.get('txtTakeWhile')?.valueChanges
    .pipe(
