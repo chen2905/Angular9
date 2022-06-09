@@ -26,9 +26,12 @@ export class RxjsTakeTakeWhileOperatorComponent implements OnInit {
       take(2),
       debounceTime(2000))
     .subscribe(data =>{this.txtTakeDisplay=data});
-   this.rxjsForm.get('txtTakeWhile')?.valueChanges.pipe(
+
+   this.rxjsForm.get('txtTakeWhile')?.valueChanges
+   .pipe(
      takeWhile(input=>this.shorterThan(input,5)),
-     debounceTime(2000)).subscribe(data =>{this.txtTakeWhileDisplay=data});
+     debounceTime(2000))
+    .subscribe(data =>{this.txtTakeWhileDisplay=data});
   }
 shorterThan(iInput:string, ilength:number){
   return iInput.length<ilength?true:false
