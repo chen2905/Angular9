@@ -7,6 +7,9 @@ import { RxjsOfOperatorComponent } from './rxjs-of-operator/rxjs-of-operator.com
 import { RxjsFromOperatorComponent } from './rxjs-from-operator/rxjs-from-operator.component';
 import { RxjsFromEventOperatorComponent } from './rxjs-from-event-operator/rxjs-from-event-operator.component';
 import { RxjsIntervalOperatorComponent } from './rxjs-interval-operator/rxjs-interval-operator.component';
+import { RxjsDebounceTimeOperatorComponent } from './rxjs-debounce-time-operator/rxjs-debounce-time-operator.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RxjsTakeTakeWhileOperatorComponent } from './rxjs-take-take-while-operator/rxjs-take-take-while-operator.component';
 
 
 @NgModule({
@@ -15,11 +18,15 @@ import { RxjsIntervalOperatorComponent } from './rxjs-interval-operator/rxjs-int
     RxjsOfOperatorComponent,
     RxjsFromOperatorComponent,
     RxjsFromEventOperatorComponent,
-    RxjsIntervalOperatorComponent
+    RxjsIntervalOperatorComponent,
+    RxjsDebounceTimeOperatorComponent,
+    RxjsTakeTakeWhileOperatorComponent
   ],
   imports: [
     CommonModule,
-    RxjsRoutingModule
+    RxjsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RxjsModule { }
