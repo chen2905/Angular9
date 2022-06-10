@@ -10,6 +10,8 @@ import { RxjsIntervalOperatorComponent } from './rxjs-interval-operator/rxjs-int
 import { RxjsDebounceTimeOperatorComponent } from './rxjs-debounce-time-operator/rxjs-debounce-time-operator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RxjsTakeTakeWhileOperatorComponent } from './rxjs-take-take-while-operator/rxjs-take-take-while-operator.component';
+import { RxjsFirstLastElementAtOperatorComponent } from './rxjs-first-last-element-at-operator/rxjs-first-last-element-at-operator.component';
+import { RxjsMinMaxOperatorComponent } from './rxjs-min-max-operator/rxjs-min-max-operator.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RxjsTakeTakeWhileOperatorComponent } from './rxjs-take-take-while-opera
     RxjsFromEventOperatorComponent,
     RxjsIntervalOperatorComponent,
     RxjsDebounceTimeOperatorComponent,
-    RxjsTakeTakeWhileOperatorComponent
+    RxjsTakeTakeWhileOperatorComponent,
+    RxjsFirstLastElementAtOperatorComponent,
+    RxjsMinMaxOperatorComponent
   ],
   imports: [
     CommonModule,

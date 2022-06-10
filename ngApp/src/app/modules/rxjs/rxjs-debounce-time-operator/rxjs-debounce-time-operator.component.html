@@ -1,13 +1,19 @@
 <form [formGroup]="rxjsForm">
 
-  <div class="row">
-    <div class="col-3">input without debounce time opt:</div>
+  <div class="row p-2">
+    <div class="col-4"> without debounce time opt:</div>
     <div class="col-6"><input type="text" name="txtNoDebounce" formControlName="txtNoDebounce"></div>
-    <div class="col-3">{{txtNoDebounceDisplay}}</div>
+    <div class="col-2">{{txtNoDebounceDisplay}}</div>
   </div>
-  <div class="row">
-    <div class="col-3">input with debounce time opt:</div>
+  <div class="row p-2">
+    <div class="col-4"> with debounce time opt:</div>
     <div class="col-6"><input type="text" name="txtYesDebounce" formControlName="txtYesDebounce"></div>
-    <div class="col-3">{{txtYesDebounceDisplay}}</div>
+    <div class="col-2">{{txtYesDebounceDisplay}}</div>
+  </div>
+
+  <div class="row p-2">
+    <div class="col-4"> with filter only less than 5 chars:</div>
+    <div class="col-6"><input type="text" name="txtFilter" formControlName="txtFilter"></div>
+    <div class="col-2">{{txtFilterDisplay}}</div>
   </div>
 </form>
