@@ -13,6 +13,7 @@ import { RxjsTakeTakeWhileOperatorComponent } from './rxjs-take-take-while-opera
 import { RxjsFirstLastElementAtOperatorComponent } from './rxjs-first-last-element-at-operator/rxjs-first-last-element-at-operator.component';
 import { RxjsMinMaxOperatorComponent } from './rxjs-min-max-operator/rxjs-min-max-operator.component';
 import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-to-observable/r1-convert-variables-to-observable.component';
+import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-
     RxjsTakeTakeWhileOperatorComponent,
     RxjsFirstLastElementAtOperatorComponent,
     RxjsMinMaxOperatorComponent,
-    R1ConvertVariablesToObservableComponent
+    R1ConvertVariablesToObservableComponent,
+    R2CreateCustomObservableComponent
   ],
   imports: [
     CommonModule,
