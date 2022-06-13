@@ -16,6 +16,7 @@ import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
+import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscri
     R1ConvertVariablesToObservableComponent,
     R2CreateCustomObservableComponent,
     R3FunctionVsObservableComponent,
-    R4CancelSubscriptionOfObserverableComponent
+    R4CancelSubscriptionOfObserverableComponent,
+    R5OperatorsComponent
   ],
   imports: [
     CommonModule,
