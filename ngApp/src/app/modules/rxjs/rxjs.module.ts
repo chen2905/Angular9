@@ -14,6 +14,8 @@ import { RxjsFirstLastElementAtOperatorComponent } from './rxjs-first-last-eleme
 import { RxjsMinMaxOperatorComponent } from './rxjs-min-max-operator/rxjs-min-max-operator.component';
 import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-to-observable/r1-convert-variables-to-observable.component';
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
+import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
+import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { R2CreateCustomObservableComponent } from './r2-create-custom-observable
     RxjsFirstLastElementAtOperatorComponent,
     RxjsMinMaxOperatorComponent,
     R1ConvertVariablesToObservableComponent,
-    R2CreateCustomObservableComponent
+    R2CreateCustomObservableComponent,
+    R3FunctionVsObservableComponent,
+    R4CancelSubscriptionOfObserverableComponent
   ],
   imports: [
     CommonModule,
