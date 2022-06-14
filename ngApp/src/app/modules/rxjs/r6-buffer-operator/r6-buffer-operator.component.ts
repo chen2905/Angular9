@@ -1,5 +1,5 @@
 import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
-import { buffer, bufferCount, bufferTime, bufferToggle, fromEvent, interval, Observable, tap } from 'rxjs';
+import { buffer, bufferCount, bufferTime, bufferToggle, bufferWhen, fromEvent, interval, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-r6-buffer-operator',
@@ -58,4 +58,26 @@ export class R6BufferOperatorComponent implements OnInit,AfterViewInit {
         .pipe(bufferToggle(opening,closing))
         .subscribe(data=>console.log('bufferred data:'+ data))
   }
+  startIntervalWithBufferWhen(){
+    let x=0
+    interval(500)
+    .pipe(
+     tap(i=>{x=i}),
+    bufferWhen(
+          ()=>{
+            if(x<5)
+            {
+              return interval(1000)
+            }
+             return interval(2000)
+          }
+
+    )
+    )
+    .subscribe(data=>{
+      console.log(data);
+    })
+
+  }
+
 }

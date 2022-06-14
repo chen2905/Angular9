@@ -18,6 +18,7 @@ import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
 import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operator.component';
+import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operat
     R3FunctionVsObservableComponent,
     R4CancelSubscriptionOfObserverableComponent,
     R5OperatorsComponent,
-    R6BufferOperatorComponent
+    R6BufferOperatorComponent,
+    R7TakeOperatorComponent
   ],
   imports: [
     CommonModule,

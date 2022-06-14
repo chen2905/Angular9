@@ -6,6 +6,7 @@ import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
 import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operator.component';
+import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.component';
 import { RxjsDebounceTimeOperatorComponent } from './rxjs-debounce-time-operator/rxjs-debounce-time-operator.component';
 import { RxjsFirstLastElementAtOperatorComponent } from './rxjs-first-last-element-at-operator/rxjs-first-last-element-at-operator.component';
 import { RxjsFromEventOperatorComponent } from './rxjs-from-event-operator/rxjs-from-event-operator.component';
@@ -23,6 +24,8 @@ const routes: Routes = [
   {path:'cancel-subscription-of-observable',component:R4CancelSubscriptionOfObserverableComponent},
   {path:'operator',component:R5OperatorsComponent},
   {path:'buffer-operator',component:R6BufferOperatorComponent},
+  {path:'take-operator',component:R7TakeOperatorComponent},
+
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},
