@@ -1,0 +1,29 @@
+<button class="btn btn-success" (click)="startInterval()">start the interval</button>
+<br/>
+<br/>
+<button class="btn btn-primary" id ="btnShowBufferredData">show data from the interval</button>
+<br/>
+data pushed from interval:
+<div *ngIf="intervalData.length">
+  <div *ngFor="let data of intervalData">{{data}}</div>
+</div>
+<br/>
+<br/>
+<button class="btn btn-success" (click)="startIntervalWithBufferCount()">start the interval with buffercount</button>
+<br/>
+<br/>
+<div *ngIf="intervalDataWithBufferCount.length">
+  <div *ngFor="let data of intervalDataWithBufferCount"><br/>{{data}}</div>
+</div>
+<br/>
+<br/>
+<button class="btn btn-primary" (click)="startIntervalWithBufferTime()">show data from the interval buffertime</button>
+<br/>
+<br/>
+<div *ngIf="intervalDataWithBufferTime.length">
+  <div *ngFor="let data of intervalDataWithBufferTime"><br/>{{data}}</div>
+</div>
+
+<button class="btn btn-primary" (click)="startIntervalWithBufferToggle()">try see the buffer toggle in console.log</button>
+<br/>
+<br/>

@@ -17,6 +17,7 @@ import { R2CreateCustomObservableComponent } from './r2-create-custom-observable
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
+import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operator.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
     R2CreateCustomObservableComponent,
     R3FunctionVsObservableComponent,
     R4CancelSubscriptionOfObserverableComponent,
-    R5OperatorsComponent
+    R5OperatorsComponent,
+    R6BufferOperatorComponent
   ],
   imports: [
     CommonModule,
