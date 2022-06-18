@@ -8,6 +8,7 @@ import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
 import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operator.component';
 import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.component';
 import { R8SkipOperatorComponent } from './r8-skip-operator/r8-skip-operator.component';
+import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-operator.component';
 import { RxjsDebounceTimeOperatorComponent } from './rxjs-debounce-time-operator/rxjs-debounce-time-operator.component';
 import { RxjsFirstLastElementAtOperatorComponent } from './rxjs-first-last-element-at-operator/rxjs-first-last-element-at-operator.component';
 import { RxjsFromEventOperatorComponent } from './rxjs-from-event-operator/rxjs-from-event-operator.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'buffer-operator',component:R6BufferOperatorComponent},
   {path:'take-operator',component:R7TakeOperatorComponent},
   {path:'skip-operator',component:R8SkipOperatorComponent},
+  {path:'distinct-operator',component:R9DistinctOperatorComponent},
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},

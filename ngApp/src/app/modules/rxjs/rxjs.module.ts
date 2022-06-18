@@ -20,6 +20,7 @@ import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
 import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operator.component';
 import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.component';
 import { R8SkipOperatorComponent } from './r8-skip-operator/r8-skip-operator.component';
+import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-operator.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { R8SkipOperatorComponent } from './r8-skip-operator/r8-skip-operator.com
     R5OperatorsComponent,
     R6BufferOperatorComponent,
     R7TakeOperatorComponent,
-    R8SkipOperatorComponent
+    R8SkipOperatorComponent,
+    R9DistinctOperatorComponent
   ],
   imports: [
     CommonModule,

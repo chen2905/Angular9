@@ -1,0 +1,23 @@
+<button class="btn btn-success" (click)="onDistinct()">click to see the distinct example</button>
+
+<div *ngFor="let number of numberSet">
+  {{number}}
+</div>
+
+<div *ngFor="let number of numbers">
+  {{number|json}}
+</div>
+<button class="btn btn-success" (click)="onDistinctUntilChanged()">click to see the distinctUntilChanged operator example</button>
+
+<div *ngFor="let number of numberSet">
+  {{number|json}}
+</div>
+
+
+<div *ngFor="let f of families">
+  {{f|json}}
+</div>
+<button class="btn btn-success" (click)="onDistinctUntilKeyChanged()">click to see the distinctUntilKeyChanged operator example</button>
+<div *ngFor="let f of familySet">
+  {{f|json}}
+</div>
