@@ -21,6 +21,8 @@ import { R6BufferOperatorComponent } from './r6-buffer-operator/r6-buffer-operat
 import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.component';
 import { R8SkipOperatorComponent } from './r8-skip-operator/r8-skip-operator.component';
 import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-operator.component';
+import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
+import { R11ExampleOperatorComponent } from './r11-example-operator/r11-example-operator.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-
     R6BufferOperatorComponent,
     R7TakeOperatorComponent,
     R8SkipOperatorComponent,
-    R9DistinctOperatorComponent
+    R9DistinctOperatorComponent,
+    R10FilterOperatorComponent,
+    R11ExampleOperatorComponent
   ],
   imports: [
     CommonModule,
