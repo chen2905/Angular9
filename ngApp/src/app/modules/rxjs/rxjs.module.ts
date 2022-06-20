@@ -22,7 +22,8 @@ import { R7TakeOperatorComponent } from './r7-take-operator/r7-take-operator.com
 import { R8SkipOperatorComponent } from './r8-skip-operator/r8-skip-operator.component';
 import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-operator.component';
 import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
-import { R11ExampleOperatorComponent } from './r11-example-operator/r11-example-operator.component';
+import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
+import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { R11ExampleOperatorComponent } from './r11-example-operator/r11-example-
     R8SkipOperatorComponent,
     R9DistinctOperatorComponent,
     R10FilterOperatorComponent,
-    R11ExampleOperatorComponent
+    R11SampleOperatorComponent,
+    R12FirstLastOperatorComponent
   ],
   imports: [
     CommonModule,

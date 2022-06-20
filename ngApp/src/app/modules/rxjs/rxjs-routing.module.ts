@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-to-observable/r1-convert-variables-to-observable.component';
 import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
-import { R11ExampleOperatorComponent } from './r11-example-operator/r11-example-operator.component';
+import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
+import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
@@ -32,8 +33,8 @@ const routes: Routes = [
   {path:'skip-operator',component:R8SkipOperatorComponent},
   {path:'distinct-operator',component:R9DistinctOperatorComponent},
   {path:'filter-operator',component:R10FilterOperatorComponent},
-  {path:'example-operator',component:R11ExampleOperatorComponent},
-
+  {path:'sample-operator',component:R11SampleOperatorComponent},
+  {path:'first-last-operator',component:R12FirstLastOperatorComponent},
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},

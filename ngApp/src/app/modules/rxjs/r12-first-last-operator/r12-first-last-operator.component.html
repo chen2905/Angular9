@@ -1,0 +1,7 @@
+<button class="btn btn-primary" (click)="onFirstClick()">click to see the first operator effect on [1,2,3,4,5]</button>
+
+<div *ngIf="errorMessage">error:{{errorMessage}}</div>
+<div *ngIf="completeMessage">complete:{{completeMessage}}</div>
+<div *ngFor="let n of outputNumberSet">
+  {{n}}
+</div>
