@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { R13DebounceOperatorComponent } from 'src/app/modules/rxjs/r13-debounce-operator/r13-debounce-operator.component';
 import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-to-observable/r1-convert-variables-to-observable.component';
 import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
 import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
@@ -35,6 +36,8 @@ const routes: Routes = [
   {path:'filter-operator',component:R10FilterOperatorComponent},
   {path:'sample-operator',component:R11SampleOperatorComponent},
   {path:'first-last-operator',component:R12FirstLastOperatorComponent},
+  {path:'debounce-operator',component:R13DebounceOperatorComponent},
+
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},

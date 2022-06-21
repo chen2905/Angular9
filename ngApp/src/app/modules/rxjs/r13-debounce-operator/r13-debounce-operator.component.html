@@ -1,0 +1,24 @@
+<button class="btn btn-primary" (click)="onDebounceInterval()">click to see the debounce operator effect on interval(1000) with interval(100* val)</button>
+
+<br>
+<br>
+<button class="btn btn-primary" id="btnDebounce">click to see debounce operator on limit button click </button>
+
+
+<br>
+<br>
+<button class="btn btn-outline-success" (click)="onElementAt()">click to see elementAt operator on interval(1000) </button>
+
+
+
+<br>
+<br>
+<button class="btn btn-outline-warning" (click)="onIgnoreElment()">click to see ignoreElment operator on interval(1000) </button>
+
+
+<div *ngIf="errorMessage">error:{{errorMessage}}</div>
+<div *ngIf="completeMessage">complete:{{completeMessage}}</div>
+<div *ngFor="let n of outputNumberSet">
+  {{n}}
+</div>
+

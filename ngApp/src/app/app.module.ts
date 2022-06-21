@@ -34,6 +34,7 @@ import { StagingModeComponent } from './components/staging-mode/staging-mode.com
 
 import { OrdersModule} from './modules/orders/orders.module';
 import { RxjsModule } from './modules/rxjs/rxjs.module';
+import { R13DebounceOperatorComponent } from './modules/rxjs/r13-debounce-operator/r13-debounce-operator.component';
 
 
 
@@ -63,7 +64,8 @@ AttributeBindingComponent,
     LeftMenuComponent,
     ContactComponent,
     AotComponent,
-    StagingModeComponent
+    StagingModeComponent,
+    R13DebounceOperatorComponent
   ],
   imports: [
     BrowserModule,

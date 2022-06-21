@@ -1,4 +1,13 @@
-<button class="btn btn-primary" (click)="onFirstClick()">click to see the first operator effect on [1,2,3,4,5]</button>
+<button class="btn btn-primary" (click)="onFirstClick()">click to see the first operator effect on 1, 2, 3, 4, 5, 6,7,8,9,10,11</button>
+
+<br>
+<br>
+<button class="btn btn-primary" (click)="onLastClick()">click to see the last operator effect on i1, 2, 3, 4, 5, 6,7,8,9,10,11</button>
+
+
+<br>
+<br>
+NOTE:LAST HAS NO EFFECT ON INTERVAL, SINCE IT CANNOT PREDICT FUTURE VALUE IS THE LAST
 
 <div *ngIf="errorMessage">error:{{errorMessage}}</div>
 <div *ngIf="completeMessage">complete:{{completeMessage}}</div>
