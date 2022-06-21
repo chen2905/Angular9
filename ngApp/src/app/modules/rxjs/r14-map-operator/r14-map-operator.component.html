@@ -1,0 +1,8 @@
+<button class="btn btn-outline-primary" id="btnMap">click to see map operator effects</button>
+<br>
+<div *ngIf="errorMessage">error:{{errorMessage}}</div>
+<div *ngIf="completeMessage">complete:{{completeMessage}}</div>
+<div *ngFor="let n of outputSet">
+  {{n|json}}
+</div>
+

@@ -16,6 +16,10 @@
 <button class="btn btn-outline-warning" (click)="onIgnoreElment()">click to see ignoreElment operator on interval(1000) </button>
 
 
+<br>
+<br>
+<button class="btn btn-outline-primary" (click)="onSingle()">click to see single operator on [1, 2, 3, 4, 5, 6,7,8,9,10,11] </button>
+
 <div *ngIf="errorMessage">error:{{errorMessage}}</div>
 <div *ngIf="completeMessage">complete:{{completeMessage}}</div>
 <div *ngFor="let n of outputNumberSet">

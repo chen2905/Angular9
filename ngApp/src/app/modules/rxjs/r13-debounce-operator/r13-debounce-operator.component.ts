@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { debounce, elementAt, fromEvent, ignoreElements, interval, take } from 'rxjs';
+import { debounce, elementAt, from, fromEvent, ignoreElements, interval, single, take } from 'rxjs';
 
 @Component({
   selector: 'app-r13-debounce-operator',
@@ -65,5 +65,19 @@ export class R13DebounceOperatorComponent implements OnInit,AfterViewInit {
       ()=>this.completeMessage = "ignoreElements complete"
     );
 
+  }
+
+  onSingle(){
+    // interval(500).pipe(
+      from(this.fromNumberSet).pipe(
+      single(value=>value==9)
+    ).subscribe(
+      (data)=>{
+        this.outputNumberSet?.push(data)
+        console.log(data)
+      },
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "single operator complete"
+    );
   }
 }

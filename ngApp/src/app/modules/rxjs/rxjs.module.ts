@@ -24,6 +24,7 @@ import { R9DistinctOperatorComponent } from './r9-distinct-operator/r9-distinct-
 import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
 import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
+import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-fir
     R9DistinctOperatorComponent,
     R10FilterOperatorComponent,
     R11SampleOperatorComponent,
-    R12FirstLastOperatorComponent
+    R12FirstLastOperatorComponent,
+    R14MapOperatorComponent
   ],
   imports: [
     CommonModule,

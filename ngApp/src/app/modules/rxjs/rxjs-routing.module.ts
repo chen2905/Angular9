@@ -5,6 +5,7 @@ import { R1ConvertVariablesToObservableComponent } from './r1-convert-variables-
 import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-operator.component';
 import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
+import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
@@ -37,7 +38,7 @@ const routes: Routes = [
   {path:'sample-operator',component:R11SampleOperatorComponent},
   {path:'first-last-operator',component:R12FirstLastOperatorComponent},
   {path:'debounce-operator',component:R13DebounceOperatorComponent},
-
+  {path:'map-operator',component:R14MapOperatorComponent},
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},
