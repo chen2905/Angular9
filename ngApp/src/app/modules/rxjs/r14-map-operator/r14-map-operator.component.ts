@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { fromEvent, map } from 'rxjs';
+import { fromEvent, interval, map, mapTo, take } from 'rxjs';
 
 @Component({
   selector: 'app-r14-map-operator',
@@ -33,4 +33,16 @@ export class R14MapOperatorComponent implements OnInit, AfterViewInit {
       ()=>this.completeMessage = "map operator complete"
     );
   }
+
+  onMapTo(){
+    interval(1000).pipe(
+      take(9),
+      mapTo("Thanks God")
+    ).subscribe(
+      (data)=>this.outputSet?.push(data),
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "mapTo operator complete"
+    );
+  }
+
 }

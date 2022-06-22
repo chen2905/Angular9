@@ -65,7 +65,7 @@ AttributeBindingComponent,
     ContactComponent,
     AotComponent,
     StagingModeComponent,
-    R13DebounceOperatorComponent
+
   ],
   imports: [
     BrowserModule,

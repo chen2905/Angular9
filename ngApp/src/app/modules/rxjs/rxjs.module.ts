@@ -25,6 +25,7 @@ import { R10FilterOperatorComponent } from './r10-filter-operator/r10-filter-ope
 import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-operator.component';
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
+import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.com
     R10FilterOperatorComponent,
     R11SampleOperatorComponent,
     R12FirstLastOperatorComponent,
-    R14MapOperatorComponent
+    R14MapOperatorComponent,
+    R15AjaxOperatorComponent
   ],
   imports: [
     CommonModule,

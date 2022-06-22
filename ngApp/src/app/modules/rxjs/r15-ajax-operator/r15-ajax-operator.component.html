@@ -1,0 +1,17 @@
+<button class="btn btn-outline-primary" (click)="onCallAjax()">click to see ajax operator gets all the response</button>
+<br/>
+<br>
+<button class="btn btn-outline-success" (click)="onCallAjaxGetJSON()">click to see ajax operator getJson method get only the data</button>
+<br/>
+<br>
+<button class="btn btn-outline-secondary" (click)="onCallAjaxGetJSONMergeMap()">click to see ajax operator getJson method with mergeMap</button>
+<br/>
+<br>
+
+<br>
+<div *ngIf="errorMessage">error:{{errorMessage}}</div>
+<div *ngIf="completeMessage">complete:{{completeMessage}}</div>
+<div *ngFor="let n of outputSet">
+  {{n|json}}
+</div>
+
