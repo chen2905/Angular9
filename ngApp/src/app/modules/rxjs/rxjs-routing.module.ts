@@ -7,6 +7,7 @@ import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-ope
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.component';
+import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
@@ -41,6 +42,8 @@ const routes: Routes = [
   {path:'debounce-operator',component:R13DebounceOperatorComponent},
   {path:'map-operator',component:R14MapOperatorComponent},
   {path:'ajax-operator',component:R15AjaxOperatorComponent},
+
+  {path:'subject',component:R16MulticastingWithSubjectComponent},
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},

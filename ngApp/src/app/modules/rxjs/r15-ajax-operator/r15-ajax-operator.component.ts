@@ -101,4 +101,24 @@ export class R15AjaxOperatorComponent implements OnInit {
 
   }
 
+  onCallAjaxGetJSONSwitchMap(){
+    this.outputSet =[]
+    interval(100).pipe(
+      filter(id=>id>0),
+      exhaustMap((id)=>{
+        return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
+
+      }),
+     take(10)
+    ).subscribe(
+
+      (data)=>{
+       // this.outputSet =[]
+        this.outputSet?.push(data)},
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "ajax getJSON operator with switch map complete"
+    );
+
+  }
+
 }

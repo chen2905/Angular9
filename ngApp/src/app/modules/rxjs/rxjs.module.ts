@@ -26,6 +26,7 @@ import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-ope
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.component';
+import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.
     R11SampleOperatorComponent,
     R12FirstLastOperatorComponent,
     R14MapOperatorComponent,
-    R15AjaxOperatorComponent
+    R15AjaxOperatorComponent,
+    R16MulticastingWithSubjectComponent
   ],
   imports: [
     CommonModule,
