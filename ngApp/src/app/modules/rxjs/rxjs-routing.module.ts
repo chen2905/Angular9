@@ -7,9 +7,13 @@ import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-ope
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.component';
+<<<<<<< HEAD
 import { R16ColdHotObservableComponent } from './r16-cold-hot-observable/r16-cold-hot-observable.component';
 
 
+=======
+import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
+>>>>>>> af5891f0bb90dd3ee60fa5d02a706f8226a88123
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
@@ -44,7 +48,12 @@ const routes: Routes = [
   {path:'debounce-operator',component:R13DebounceOperatorComponent},
   {path:'map-operator',component:R14MapOperatorComponent},
   {path:'ajax-operator',component:R15AjaxOperatorComponent},
+<<<<<<< HEAD
   {path:'cold-vs-hot-operator',component:R16ColdHotObservableComponent},
+=======
+
+  {path:'subject',component:R16MulticastingWithSubjectComponent},
+>>>>>>> af5891f0bb90dd3ee60fa5d02a706f8226a88123
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
   {path:'from-operator',component:RxjsFromOperatorComponent},

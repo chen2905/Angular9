@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { off } from 'process';
-import { interval, map, mergeMap,of } from 'rxjs';
+import {concatMap, exhaustMap, filter, interval, map, mergeMap,mergeMapTo,of, take } from 'rxjs';
 import {ajax} from 'rxjs/ajax'
+
 @Component({
   selector: 'app-r15-ajax-operator',
   templateUrl: './r15-ajax-operator.component.html',
@@ -17,11 +18,12 @@ export class R15AjaxOperatorComponent implements OnInit {
   ngOnInit(): void {
   }
   onCallAjax(){
+    this.outputSet =[]
     ajax('https://jsonplaceholder.typicode.com/posts')
     .subscribe(
 
       (data)=>{
-        this.outputSet =[]
+
         this.outputSet?.push(data)},
       error=>{this.errorMessage =error},
       ()=>this.completeMessage = "ajax getJSON operator complete"
@@ -30,11 +32,12 @@ export class R15AjaxOperatorComponent implements OnInit {
 
   }
   onCallAjaxGetJSON(){
+    this.outputSet =[]
     ajax.getJSON('https://jsonplaceholder.typicode.com/posts')
     .subscribe(
 
       (data)=>{
-        this.outputSet =[]
+
         this.outputSet?.push(data)},
       error=>{this.errorMessage =error},
       ()=>this.completeMessage = "ajax getJSON operator complete"
@@ -43,6 +46,8 @@ export class R15AjaxOperatorComponent implements OnInit {
   }
 
   onCallAjaxGetJSONMergeMap(){
+
+    this.outputSet =[]
     of(1,2,3,4,5,6).pipe(
       mergeMap((id)=>{
         return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -57,4 +62,63 @@ export class R15AjaxOperatorComponent implements OnInit {
       ()=>this.completeMessage = "ajax getJSON operator with merge map complete"
     );
   }
+  onCallAjaxGetJSONConcatMap(){
+    this.outputSet =[]
+    interval(1000).pipe(
+      filter(id=>id>0),
+      concatMap((id)=>{
+        return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
+
+      }),
+     // mergeMap((obs)=>obs)
+    ).subscribe(
+
+      (data)=>{
+       // this.outputSet =[]
+        this.outputSet?.push(data)},
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "ajax getJSON operator with concat map complete"
+    );
+
+  }
+  onCallAjaxGetJSONExhaustMap(){
+    this.outputSet =[]
+    interval(10).pipe(
+      filter(id=>id>0),
+      exhaustMap((id)=>{
+        return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
+
+      }),
+     take(10)
+    ).subscribe(
+
+      (data)=>{
+       // this.outputSet =[]
+        this.outputSet?.push(data)},
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "ajax getJSON operator with exhaust map complete"
+    );
+
+  }
+
+  onCallAjaxGetJSONSwitchMap(){
+    this.outputSet =[]
+    interval(100).pipe(
+      filter(id=>id>0),
+      exhaustMap((id)=>{
+        return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
+
+      }),
+     take(10)
+    ).subscribe(
+
+      (data)=>{
+       // this.outputSet =[]
+        this.outputSet?.push(data)},
+      error=>{this.errorMessage =error},
+      ()=>this.completeMessage = "ajax getJSON operator with switch map complete"
+    );
+
+  }
+
 }
