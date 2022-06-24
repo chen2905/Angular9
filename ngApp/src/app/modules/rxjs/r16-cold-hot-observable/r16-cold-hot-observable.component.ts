@@ -40,6 +40,8 @@ export class R16ColdHotObservableComponent implements OnInit {
       error=>{this.errorMessage1 =error},
       ()=>this.completeMessage1 = "observer1 complete"
     );
+
+
     observerable$.subscribe(
       (data)=>{
        this.outputSet2?.push(data)},
@@ -129,12 +131,18 @@ export class R16ColdHotObservableComponent implements OnInit {
         ()=>this.completeMessage1 = "observer1 complete"
 
     )
-    subject$.subscribe(
-      (data)=>{
-        this.outputSet2?.push(data)},
-        error=>{this.errorMessage2 =error},
-        ()=>this.completeMessage2 = "observer2 complete"
 
-    )
+    setTimeout(() => {
+      subject$.subscribe(
+        (data)=>{
+          this.outputSet2?.push(data)},
+          error=>{this.errorMessage2 =error},
+          ()=>this.completeMessage2 = "observer2 complete"
+
+      )
+    }, 2000);
+
+
+
   }
 }
