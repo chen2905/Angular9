@@ -26,6 +26,7 @@ import { R11SampleOperatorComponent } from './r11-sample-operator/r11-sample-ope
 import { R12FirstLastOperatorComponent } from './r12-first-last-operator/r12-first-last-operator.component';
 import { R14MapOperatorComponent } from './r14-map-operator/r14-map-operator.component';
 import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.component';
+import { R16ColdHotObservableComponent } from './r16-cold-hot-observable/r16-cold-hot-observable.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.
     R11SampleOperatorComponent,
     R12FirstLastOperatorComponent,
     R14MapOperatorComponent,
-    R15AjaxOperatorComponent
+    R15AjaxOperatorComponent,
+    R16ColdHotObservableComponent
   ],
   imports: [
     CommonModule,

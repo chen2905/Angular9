@@ -1,0 +1,33 @@
+<p><button class="btn btn-outline-success" (click)="onColdObservable()">
+  click to see cold observable effects
+</button></p>
+<p><button class="btn btn-outline-primary" (click)="onHotObservable()">
+  click to see HOT observable effects
+</button></p>
+<p><button class="btn btn-outline-warning" (click)="onHotEventObservable()">
+  click to see HOT event observable effects
+</button></p>
+
+<p><button class="btn btn-outline-dark" (click)="onSubjectHotObservable()">
+  click to see HOT observable with SUJECT effects
+</button></p>
+
+
+<br />
+
+<div class="row">
+  <div class="col-6">
+    <div *ngIf="errorMessage1" class="text text-danger">error:{{ errorMessage1 }}</div>
+    <div *ngIf="completeMessage1" class="text text-success">complete:{{ completeMessage1 }}</div>
+    <div *ngFor="let n of outputSet1" class="text text-start">
+      {{ n | json }}
+    </div>
+  </div>
+  <div class="col-6">
+    <div *ngIf="errorMessage2" class="text text-danger">error:{{ errorMessage2 }}</div>
+    <div *ngIf="completeMessage2" class="text text-success">complete:{{ completeMessage2 }}</div>
+    <div *ngFor="let n of outputSet2" class="text text-info">
+      {{ n | json }}
+    </div>
+  </div>
+</div>
