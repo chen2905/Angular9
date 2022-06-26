@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, interval, mergeMap, Subject, take } from 'rxjs';
+import { BehaviorSubject, filter, interval, mergeMap, ReplaySubject, Subject, take } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -59,4 +59,65 @@ export class R16MulticastingWithSubjectComponent implements OnInit {
      oberservable$.subscribe(subject$)
 
 }
+
+
+usebehaviorSubject(){
+  let behaviorSubject$ = new BehaviorSubject(0)
+
+  this.outputSet1=[];
+  this.outputSet2=[];
+  behaviorSubject$.subscribe(data=>{
+    this.outputSet1.push("observer 1: "+data)
+  })
+
+  behaviorSubject$.next(1)
+
+
+
+  behaviorSubject$.subscribe(data=>{
+    this.outputSet2.push("observer 2 reciving: "+data)
+  })
+  setTimeout(() => {
+    behaviorSubject$.next(2)
+  },2000);
+
+  setTimeout(() => {
+    behaviorSubject$.next(3)
+  },2000);
+}
+
+
+usereplaySubject(){
+  let replaySubject$ = new ReplaySubject();
+
+  this.outputSet1=[];
+  this.outputSet2=[];
+
+
+  replaySubject$.next(1)
+  replaySubject$.subscribe(data=>{
+    this.outputSet1.push("observer 1: "+data)
+  })
+
+
+
+  replaySubject$.next(2)
+
+  setTimeout(() => {
+    replaySubject$.next(3)
+  },3000);
+
+  setTimeout(() => {
+    replaySubject$.subscribe(data=>{
+      this.outputSet2.push("observer 2 reciving: "+data)
+    })
+  },2000);
+
+
+
+
+  replaySubject$.next(4)
+
+}
+
 }

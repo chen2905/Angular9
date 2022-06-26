@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent, interval, Observable, observable, Subject } from 'rxjs';
+import { connect, connectable, fromEvent, interval, Observable, observable, share, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-r16-cold-hot-observable',
@@ -145,4 +145,60 @@ export class R16ColdHotObservableComponent implements OnInit {
 
 
   }
+
+  onConnectable(){
+    let source$= connectable(interval(2000))
+
+    this.outputSet1=[];
+    this.outputSet2=[];
+
+    source$.subscribe(
+      (data)=>{
+        this.outputSet1?.push(data)},
+        error=>{this.errorMessage1 =error},
+        ()=>this.completeMessage1 = "observer1 complete"
+
+    )
+
+    setTimeout(() => {
+      source$.subscribe(
+        (data)=>{
+          this.outputSet2?.push(data)},
+          error=>{this.errorMessage2 =error},
+          ()=>this.completeMessage2 = "observer2 complete"
+
+      )
+    }, 2000);
+
+    source$.connect()
+
+  }
+
+  onShare(){
+    let source$= interval(2000).pipe(share())
+
+    this.outputSet1=[];
+    this.outputSet2=[];
+
+    source$.subscribe(
+      (data)=>{
+        this.outputSet1?.push(data)},
+        error=>{this.errorMessage1 =error},
+        ()=>this.completeMessage1 = "observer1 complete"
+
+    )
+
+    setTimeout(() => {
+      source$.subscribe(
+        (data)=>{
+          this.outputSet2?.push(data)},
+          error=>{this.errorMessage2 =error},
+          ()=>this.completeMessage2 = "observer2 complete"
+
+      )
+    }, 2000);
+
+
+  }
+
 }
