@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, filter, interval, mergeMap, ReplaySubject, Subject, take } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, filter, interval, mergeMap, ReplaySubject, Subject, take } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -98,9 +98,6 @@ usereplaySubject(){
   replaySubject$.subscribe(data=>{
     this.outputSet1.push("observer 1: "+data)
   })
-
-
-
   replaySubject$.next(2)
 
   setTimeout(() => {
@@ -113,11 +110,60 @@ usereplaySubject(){
     })
   },2000);
 
-
-
-
   replaySubject$.next(4)
 
 }
 
+useAsyncSubject(){
+  let asyncSubject$ = new AsyncSubject()
+  this.outputSet1=[];
+  this.outputSet2=[];
+
+  setTimeout(() => {
+    asyncSubject$.subscribe(data=>{
+      this.outputSet1.push("observer 1 reciving: "+data)
+    })
+  },2000);
+
+asyncSubject$.next(1);
+asyncSubject$.next(2);
+asyncSubject$.next(3);
+setTimeout(() => {
+  asyncSubject$.subscribe(data=>{
+    this.outputSet2.push("observer 2 reciving: "+data)
+  })
+},2000);
+
+asyncSubject$.complete()
+asyncSubject$.next(4);//won't be received
+
+
+}
+
+useVoidSubject(){
+
+  let voidSubject$  = new Subject<void>();
+
+  this.outputSet1=[];
+  this.outputSet2=[];
+
+
+
+
+voidSubject$.subscribe(data=>{
+  this.outputSet2.push("observer 2 reciving: ")
+},err=>this.errorMessage2 =err,()=>this.completeMessage2='observer 2 complete')
+
+
+voidSubject$.subscribe(data=>{
+  this.outputSet1.push("observer 1 reciving: ")
+})
+
+voidSubject$.next()
+voidSubject$.next()
+
+
+
+
+}
 }

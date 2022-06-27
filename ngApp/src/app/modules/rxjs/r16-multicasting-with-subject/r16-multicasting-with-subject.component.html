@@ -3,13 +3,24 @@
 </button>
 </p>
 
-<p><button class="btn btn-outline-subject" (click)="usebehaviorSubject()">
+<p><button class="btn btn-outline-success" (click)="usebehaviorSubject()">
   click to see behavior subject multicasting to two observers at same time
 </button>
 </p>
 
 <p><button class="btn btn-outline-dark" (click)="usereplaySubject()">
   click to see replay subject multicasting to two observers at different times
+</button>
+</p>
+
+<p><button class="btn btn-outline-dark" (click)="useAsyncSubject()">
+  click to see Async subject multicasting to two observers the last data once the observable finished
+</button>
+</p>
+
+
+<p><button class="btn btn-outline-warning" (click)="useVoidSubject()">
+  click to see void subject multicasting to two observers witout data
 </button>
 </p>
 
