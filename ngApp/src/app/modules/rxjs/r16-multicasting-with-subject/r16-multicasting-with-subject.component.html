@@ -23,7 +23,19 @@
   click to see void subject multicasting to two observers witout data
 </button>
 </p>
+<p><button class="btn btn-outline-danger" (click)="useBehaviorSubject()">
+  click to see multicasting to two observers with connectable observables along with behavior subject
+</button>
+</p>
 
+<p><button class="btn btn-outline-primary" (click)="useAsynSubjectInConnectable()">
+  click to see multicasting last emitted data to two observers with connectable observables along with aysnc subject
+</button>
+</p>
+<p><button class="btn btn-outline-success" (click)="useReplaySubjectInConnectable()">
+  click to see multicasting replay emitted data to later subscribed observers with connectable observables along with replay subject
+</button>
+</p>
 <br />
 <br />
 
