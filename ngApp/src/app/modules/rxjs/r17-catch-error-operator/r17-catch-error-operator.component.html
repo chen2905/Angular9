@@ -1,0 +1,29 @@
+<p><button class="btn btn-outline-primary" (click)="useCatchErrorOperater()">
+  click to see how the catch error operator, eimtting observable in case of error happening
+</button>
+</p>
+
+<p><button class="btn btn-outline-success" (click)="useRetryOperater()">
+  click to see how the retry operator,try eimtting observable in case of error happening
+</button>
+</p>
+<br />
+<br />
+
+<br />
+<div class="row">
+  <div class="col-6">
+    <div *ngIf="errorMessage1" class="text text-danger">error:{{ errorMessage1 }}</div>
+    <div *ngIf="completeMessage1" class="text text-success">complete:{{ completeMessage1 }}</div>
+    <div *ngFor="let n of outputSet1" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+  <div class="col-6">
+    <div *ngIf="errorMessage2" class="text text-danger">error:{{ errorMessage2 }}</div>
+    <div *ngIf="completeMessage2" class="text text-success">complete:{{ completeMessage2 }}</div>
+    <div *ngFor="let n of outputSet2" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+</div>

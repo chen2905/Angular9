@@ -30,6 +30,8 @@ import { R15AjaxOperatorComponent } from './r15-ajax-operator/r15-ajax-operator.
 import { R16ColdHotObservableComponent } from './r16-cold-hot-observable/r16-cold-hot-observable.component';
 
 import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
+import { R17CatchErrorOperatorComponent } from './r17-catch-error-operator/r17-catch-error-operator.component';
+import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18-join-combine-operator.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-sub
 
     R16ColdHotObservableComponent,
 
-    R16MulticastingWithSubjectComponent
+    R16MulticastingWithSubjectComponent,
+      R17CatchErrorOperatorComponent,
+      R18JoinCombineOperatorComponent
 
   ],
   imports: [
