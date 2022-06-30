@@ -77,6 +77,8 @@ export class R18JoinCombineOperatorComponent implements OnInit {
     });
 
     // let source2$= interval(1000)
+
+
     let source2$ = of('God', 'Please Bless');
 
     let source3$ = of('please', 'bless', 'my', 'families,Thank you so much');
