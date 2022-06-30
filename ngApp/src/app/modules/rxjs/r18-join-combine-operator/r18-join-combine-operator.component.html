@@ -3,6 +3,24 @@
 </button>
 </p>
 
+<p><button class="btn btn-outline-success" (click)="useConcat()">
+  click to see concat operator combine two observables in order
+</button>
+</p>
+<p><button class="btn btn-outline-warning" (click)="useForkJoin()">
+  click to see concat operator combine mulitiple observables' last data together
+</button>
+</p>
+
+<p><button class="btn btn-outline-danger" (click)="useMerage()">
+  click to see merge operator to emit all observables' value until error happen
+</button>
+</p>
+<p><button class="btn btn-outline-danger" (click)="usePartition()">
+  click to see partition operator to divide source observable to two observable with custom requirement
+</button>
+</p>
+
 <br />
 <br />
 

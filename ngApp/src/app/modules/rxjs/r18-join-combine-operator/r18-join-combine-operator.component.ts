@@ -1,10 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, interval, take } from 'rxjs';
+import {
+  combineLatest,
+  concat,
+  forkJoin,
+  interval,
+  merge,
+  Observable,
+  observable,
+  of,
+  partition,
+  take,
+} from 'rxjs';
 
 @Component({
   selector: 'app-r18-join-combine-operator',
   templateUrl: './r18-join-combine-operator.component.html',
-  styleUrls: ['./r18-join-combine-operator.component.css']
+  styleUrls: ['./r18-join-combine-operator.component.css'],
 })
 export class R18JoinCombineOperatorComponent implements OnInit {
   errorMessage1: string | undefined;
@@ -17,22 +28,108 @@ export class R18JoinCombineOperatorComponent implements OnInit {
   fromSet2: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   outputSet2: any[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-  useCombineLatest(){ 
-    let source1$= interval(1000).pipe(take(5))
-    let source2$= interval(2000).pipe(take(5))
-    combineLatest([source1$,source2$]).subscribe(
+  ngOnInit(): void {}
+  useCombineLatest() {
+    let source1$ = interval(1000).pipe(take(5));
+    let source2$ = interval(2000).pipe(take(5));
+    combineLatest([source1$, source2$]).subscribe(
       (data) => {
-        this.outputSet1.push('observer 1 reciving: ' +data);
+        this.outputSet1.push('observer 1 reciving: ' + data);
       },
       (err) => (this.errorMessage1 = err),
       () => (this.completeMessage1 = 'observer 1 complete')
+    );
+  }
+  useConcat() {
+    let source1$ = new Observable((observer) => {
+      observer.next('Thanks!');
+      setTimeout(() => {}, 1000);
 
-    )
+      observer.next('God');
 
+      observer.next('for');
+
+      observer.next('your');
+
+      observer.next('blessing');
+
+      observer.complete();
+    });
+
+    let source2$ = interval(1000);
+    //let source2$ =of(1,2,3,4,5)
+    concat(source1$, source2$).subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+  }
+  useForkJoin() {
+    let source1$ = new Observable((observer) => {
+      observer.next('Thanks!');
+      setTimeout(() => {}, 1000);
+      observer.next('God');
+      observer.complete();
+    });
+
+    // let source2$= interval(1000)
+    let source2$ = of('God', 'Please Bless');
+
+    let source3$ = of('please', 'bless', 'my', 'families,Thank you so much');
+    forkJoin([source1$, source2$, source3$]).subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+  }
+  useMerage() {
+    let source1$ = new Observable((observer) => {
+      observer.next('Thanks!');
+
+      observer.next('God');
+      observer.complete();
+    });
+
+    // let source2$= interval(1000)
+    let source2$ = of('God', 'Please Bless');
+
+    let source3$ = of('please', 'bless', 'my', 'families,Thank you so much');
+
+    let source4$ = interval(2000);
+    merge(source1$, source2$, source3$, source4$).subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+  }
+
+  usePartition() {
+    let source$ = of('God', 'Mighty', 'God', 'please', 'bless', 'us');
+
+    let pSource$ = partition(source$, (value) => value == 'God');
+
+    pSource$[0].subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+    pSource$[1].subscribe(
+      (data) => {
+        this.outputSet2.push('observer 2 reciving: ' + data);
+      },
+      (err) => (this.errorMessage2 = err),
+      () => (this.completeMessage2 = 'observer 2 complete')
+    );
 
   }
 }
