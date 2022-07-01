@@ -1,15 +1,19 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {
   combineLatest,
   concat,
   forkJoin,
   interval,
+  map,
   merge,
   Observable,
   observable,
   of,
   partition,
+  race,
   take,
+  zip,
 } from 'rxjs';
 
 @Component({
@@ -134,4 +138,47 @@ export class R18JoinCombineOperatorComponent implements OnInit {
     );
 
   }
+  useRace(){
+
+    let source1$= new Observable()
+
+    let source2$= new Observable()
+
+    let source3$= new Observable()
+
+     source1$= interval(1000).pipe(map(v=>"source1$ emitting:"+v))
+     source2$= interval(900).pipe(map(v=>"source2$ emitting:"+v))
+     source3$= interval(1000).pipe(map(v=>"source3$ emitting:"+v))
+    this.outputSet1=[]
+    this.outputSet2 =[]
+    race([source1$,source2$,source3$]).subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+
+  }
+
+  useZip(){
+    let source1$= of('thanks1', 'god')
+
+    let source2$= of('thanks2', 'god')
+
+    let source3$= of('thanks3', 'god')
+
+    zip(source1$,source2$,source3$).subscribe(
+      (data) => {
+        this.outputSet1.push('observer 1 reciving: ' + data);
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+
+
+
+  }
+
+
 }

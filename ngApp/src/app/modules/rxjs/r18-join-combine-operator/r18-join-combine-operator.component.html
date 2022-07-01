@@ -16,10 +16,21 @@
   click to see merge operator to emit all observables' value until error happen
 </button>
 </p>
-<p><button class="btn btn-outline-danger" (click)="usePartition()">
+<p><button class="btn btn-outline-primary" (click)="usePartition()">
   click to see partition operator to divide source observable to two observable with custom requirement
 </button>
 </p>
+
+<p><button class="btn btn-outline-success" (click)="useRace()">
+  click to see race operator to only emit the observable who won the race
+</button>
+</p>
+
+<p><button class="btn btn-outline-warning" (click)="useZip()">
+  click to see zip operator to put multiple observables same index elements into corresponded array
+</button>
+</p>
+
 
 <br />
 <br />

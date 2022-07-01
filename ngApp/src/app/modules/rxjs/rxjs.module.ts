@@ -32,6 +32,7 @@ import { R16ColdHotObservableComponent } from './r16-cold-hot-observable/r16-col
 import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
 import { R17CatchErrorOperatorComponent } from './r17-catch-error-operator/r17-catch-error-operator.component';
 import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18-join-combine-operator.component';
+import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-scheduler-operator.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18
 
     R16MulticastingWithSubjectComponent,
       R17CatchErrorOperatorComponent,
-      R18JoinCombineOperatorComponent
+      R18JoinCombineOperatorComponent,
+      R19SchedulerOperatorComponent
 
   ],
   imports: [

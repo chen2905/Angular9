@@ -12,6 +12,7 @@ import { R16ColdHotObservableComponent } from './r16-cold-hot-observable/r16-col
 import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-subject/r16-multicasting-with-subject.component';
 import { R17CatchErrorOperatorComponent } from './r17-catch-error-operator/r17-catch-error-operator.component';
 import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18-join-combine-operator.component';
+import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-scheduler-operator.component';
 
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
@@ -51,7 +52,7 @@ const routes: Routes = [
   {path:'cold-vs-hot-operator',component:R16ColdHotObservableComponent},
   {path:'catch-error-operator',component:R17CatchErrorOperatorComponent},
   {path:'join-combine-operator',component:R18JoinCombineOperatorComponent},
-
+  {path:'scheduler-operator',component:R19SchedulerOperatorComponent},
 
 
 
