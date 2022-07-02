@@ -32,6 +32,7 @@ export class R18JoinCombineOperatorComponent implements OnInit {
   fromSet2: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   outputSet2: any[] = [];
 
+
   constructor() {}
 
   ngOnInit(): void {}
