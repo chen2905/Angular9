@@ -15,6 +15,7 @@ import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18
 import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-scheduler-operator.component';
 
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
+import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path:'catch-error-operator',component:R17CatchErrorOperatorComponent},
   {path:'join-combine-operator',component:R18JoinCombineOperatorComponent},
   {path:'scheduler-operator',component:R19SchedulerOperatorComponent},
+  {path:'creation-operator',component:R20CreationOperatorComponent},
 
 
 

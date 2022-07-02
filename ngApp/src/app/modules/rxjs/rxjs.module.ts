@@ -33,6 +33,7 @@ import { R16MulticastingWithSubjectComponent } from './r16-multicasting-with-sub
 import { R17CatchErrorOperatorComponent } from './r17-catch-error-operator/r17-catch-error-operator.component';
 import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18-join-combine-operator.component';
 import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-scheduler-operator.component';
+import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-sche
     R16MulticastingWithSubjectComponent,
       R17CatchErrorOperatorComponent,
       R18JoinCombineOperatorComponent,
-      R19SchedulerOperatorComponent
+      R19SchedulerOperatorComponent,
+      R20CreationOperatorComponent
 
   ],
   imports: [
