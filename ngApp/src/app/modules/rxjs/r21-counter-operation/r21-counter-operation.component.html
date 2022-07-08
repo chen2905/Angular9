@@ -1,0 +1,42 @@
+<p><button class="btn btn-outline-primary" (click)="useCounter()">
+  click to use simple counter and counter has self-defined logic
+</button>
+</p>
+
+
+<p><button class="btn btn-outline-success" (click)="useMax()">
+  click to use simple max and max has self-defined compare logic
+</button>
+</p>
+
+<p><button class="btn btn-outline-warning" (click)="useMin()">
+  click to use simple min and min has self-defined compare logic
+</button>
+</p>
+
+<p><button class="btn btn-outline-danger" (click)="useReduce()">
+  click to use reduce operator which accumulate all the value and emit last
+</button>
+</p>
+
+<br />
+<br />
+
+<br />
+<div class="row">
+  <div class="col-6">
+    <div *ngIf="errorMessage1" class="text text-danger">error:{{ errorMessage1 }}</div>
+    <div *ngIf="completeMessage1" class="text text-success">complete:{{ completeMessage1 }}</div>
+    <div *ngFor="let n of outputSet1" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+  <div class="col-6">
+    <div *ngIf="errorMessage2" class="text text-danger">error:{{ errorMessage2 }}</div>
+    <div *ngIf="completeMessage2" class="text text-success">complete:{{ completeMessage2 }}</div>
+    <div *ngFor="let n of outputSet2" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+</div>
+

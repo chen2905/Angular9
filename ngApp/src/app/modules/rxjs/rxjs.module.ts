@@ -34,6 +34,7 @@ import { R17CatchErrorOperatorComponent } from './r17-catch-error-operator/r17-c
 import { R18JoinCombineOperatorComponent } from './r18-join-combine-operator/r18-join-combine-operator.component';
 import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-scheduler-operator.component';
 import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
+import { R21CounterOperationComponent } from './r21-counter-operation/r21-counter-operation.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creati
       R17CatchErrorOperatorComponent,
       R18JoinCombineOperatorComponent,
       R19SchedulerOperatorComponent,
-      R20CreationOperatorComponent
+      R20CreationOperatorComponent,
+      R21CounterOperationComponent
 
   ],
   imports: [

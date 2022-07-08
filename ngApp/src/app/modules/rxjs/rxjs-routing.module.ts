@@ -16,6 +16,7 @@ import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-sche
 
 import { R2CreateCustomObservableComponent } from './r2-create-custom-observable/r2-create-custom-observable.component';
 import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
+import { R21CounterOperationComponent } from './r21-counter-operation/r21-counter-operation.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
@@ -55,7 +56,7 @@ const routes: Routes = [
   {path:'join-combine-operator',component:R18JoinCombineOperatorComponent},
   {path:'scheduler-operator',component:R19SchedulerOperatorComponent},
   {path:'creation-operator',component:R20CreationOperatorComponent},
-
+  {path:'count-operator',component:R21CounterOperationComponent},
 
 
   {path:'learning',component:RxjsLearningComponent},
