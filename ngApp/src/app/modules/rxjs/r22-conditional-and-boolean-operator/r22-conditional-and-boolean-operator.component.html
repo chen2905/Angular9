@@ -1,0 +1,37 @@
+<p><button class="btn btn-outline-primary" (click)="useIsEmpty()">
+  click to use isempty and count operator to do with the intervial which emits first 5 data
+</button>
+</p>
+
+<p><button class="btn btn-outline-warning" (click)="useFindIndex()">
+  click to use findIndex and find  operator to do find the first found item's index of
+</button>
+</p>
+
+<p><button class="btn btn-outline-secondary" (click)="useEvery()">
+  click to use useEvery operator to do see if all the item observables of (5,10,10,15,23) can be divided by 5
+</button>
+</p>
+
+
+<br />
+<br />
+
+<br />
+<div class="row">
+  <div class="col-6">
+    <div *ngIf="errorMessage1" class="text text-danger">error:{{ errorMessage1 }}</div>
+    <div *ngIf="completeMessage1" class="text text-success">complete:{{ completeMessage1 }}</div>
+    <div *ngFor="let n of outputSet1" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+  <div class="col-6">
+    <div *ngIf="errorMessage2" class="text text-danger">error:{{ errorMessage2 }}</div>
+    <div *ngIf="completeMessage2" class="text text-success">complete:{{ completeMessage2 }}</div>
+    <div *ngFor="let n of outputSet2" class="text text-sm-start">
+      {{ n|json }}
+    </div>
+  </div>
+</div>
+
