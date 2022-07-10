@@ -36,6 +36,7 @@ import { R19SchedulerOperatorComponent } from './r19-scheduler-operator/r19-sche
 import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
 import { R21CounterOperationComponent } from './r21-counter-operation/r21-counter-operation.component';
 import { R22ConditionalAndBooleanOperatorComponent } from './r22-conditional-and-boolean-operator/r22-conditional-and-boolean-operator.component';
+import { R23UtilityOperatorComponent } from './r23-utility-operator/r23-utility-operator.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { R22ConditionalAndBooleanOperatorComponent } from './r22-conditional-and
       R19SchedulerOperatorComponent,
       R20CreationOperatorComponent,
       R21CounterOperationComponent,
-      R22ConditionalAndBooleanOperatorComponent
+      R22ConditionalAndBooleanOperatorComponent,
+      R23UtilityOperatorComponent
 
   ],
   imports: [

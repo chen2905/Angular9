@@ -1,0 +1,38 @@
+<p>
+  <button class="btn btn-outline-primary" (click)="useToArray()">
+    click to use toArray operator to return observables into an array
+  </button>
+</p>
+
+<p>
+  <button class="btn btn-outline-info" (click)="useMaterialize()">
+    click to use Materialize operator to return observables into an notification objects
+  </button>
+</p>
+
+
+<br />
+<div class="row">
+  <div class="col-6">
+    <div *ngIf="errorMessage1" class="text text-danger">
+      error:{{ errorMessage1 }}
+    </div>
+    <div *ngIf="completeMessage1" class="text text-success">
+      complete:{{ completeMessage1 }}
+    </div>
+    <div *ngFor="let n of outputSet1" class="text text-sm-start">
+      {{ n | json }}
+    </div>
+  </div>
+  <div class="col-6">
+    <div *ngIf="errorMessage2" class="text text-danger">
+      error:{{ errorMessage2 }}
+    </div>
+    <div *ngIf="completeMessage2" class="text text-success">
+      complete:{{ completeMessage2 }}
+    </div>
+    <div *ngFor="let n of outputSet2" class="text text-sm-start">
+      {{ n | json }}
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   count,
+  defaultIfEmpty,
   every,
   find,
   findIndex,
@@ -82,6 +83,31 @@ export class R22ConditionalAndBooleanOperatorComponent implements OnInit {
       },
       (err) => (this.errorMessage1 = err),
       () => (this.completeMessage1 = 'observer 1 complete')
+    );
+  }
+
+  useDefaultIfEmpty(){
+    let source$ = of (5,10,10,15,23);
+
+    source$.pipe(defaultIfEmpty(0)).subscribe(
+      (data) => {
+        this.outputSet1.push(
+          ' data: ' + data
+        );
+      },
+      (err) => (this.errorMessage1 = err),
+      () => (this.completeMessage1 = 'observer 1 complete')
+    );
+
+      let source1$=interval(500)
+      source1$.pipe(take(0),defaultIfEmpty('Nothing in the observable')).subscribe(
+      (data) => {
+        this.outputSet2.push(
+          'data : ' + data
+        );
+      },
+      (err) => (this.errorMessage2 = err),
+      () => (this.completeMessage2 = 'observer 2 complete')
     );
   }
 }

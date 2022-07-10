@@ -18,6 +18,7 @@ import { R2CreateCustomObservableComponent } from './r2-create-custom-observable
 import { R20CreationOperatorComponent } from './r20-creation-operator/r20-creation-operator.component';
 import { R21CounterOperationComponent } from './r21-counter-operation/r21-counter-operation.component';
 import { R22ConditionalAndBooleanOperatorComponent } from './r22-conditional-and-boolean-operator/r22-conditional-and-boolean-operator.component';
+import { R23UtilityOperatorComponent } from './r23-utility-operator/r23-utility-operator.component';
 import { R3FunctionVsObservableComponent } from './r3-function-vs-observable/r3-function-vs-observable.component';
 import { R4CancelSubscriptionOfObserverableComponent } from './r4-cancel-subscription-of-observerable/r4-cancel-subscription-of-observerable.component';
 import { R5OperatorsComponent } from './r5-operators/r5-operators.component';
@@ -60,6 +61,7 @@ const routes: Routes = [
   {path:'count-operator',component:R21CounterOperationComponent},
   {path:'condition-boolean-operator',component:R22ConditionalAndBooleanOperatorComponent},
 
+  {path:'utility-operator',component:R23UtilityOperatorComponent},
 
   {path:'learning',component:RxjsLearningComponent},
   {path:'of-operator',component:RxjsOfOperatorComponent},
